@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400&display=swap');
+
+
+body{
+    background: linear-gradient(121deg, #438BDF 0%, rgba(83, 217, 226, 0.92) 100%);
+    font-family: 'Manrope', sans-serif;
+    height: 7917px;
+    overflow-x: hidden;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1596px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 0 auto;
+}
+.header__burger-btn{
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #00ffee;
+    z-index: 2;
+}
+.header__burger-btn span{
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    left: 5px;
+}
+.header__burger-btn span:nth-child(1){
+    transform: translateY(-10px);
+}
+.header__burger-btn span:nth-child(3){
+    transform: translateY(10px);
+}
+.header__logo {
+    background-image: url(img/Savvy\ logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 163px;
+    height: 86px;
+}
+.header__menu{
+   width: 50%;
+}
+.header__list {
+    display: flex;
+    list-style-type: none;
+}
+.header__item{
+    margin-left: 3%;
+    margin-right: 3%;
+    text-decoration: none;
+    color: white;
+}
+.header__link{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.header__link:hover{
+    color: #00ffee;
+}
+.header__number {
+    color: white;
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.header__btn {
+    width: 18%;
+    padding: 1%;
+    height: 70%;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0px 4px 50px 0px rgba(1, 240, 255, 0.92);
+    border: none;
+    color: #000;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+.header__btn:hover {
+    color: rgba(1, 110, 118, 0.92);
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0px 4px 30px 0px rgba(1, 240, 255, 0.92), 0px 4px 10px 0px #0F58AE;
+}
+/*@media*/
+
