@@ -1,0 +1,32 @@
+{
+  "name": "my__gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "air-datepicker": "^2.2.3",
+    "animate.css": "^4.1.1",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-uglify": "^3.0.2",
+    "ion-rangeslider": "^2.3.1",
+    "jquery": "^3.6.0",
+    "jquery-form-styler": "^2.0.2",
+    "mixitup": "^3.3.1",
+    "rateyo": "^2.3.2",
+    "wow.js": "^1.2.2"
+  }
+}
