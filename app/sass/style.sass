@@ -1,0 +1,523 @@
+@import fonts
+@import vars
+@import reset
+@import libs
+@import global
+
+.main-wrapper
+  background-image: linear-gradient(121deg, #438BDF 0%, rgba(83, 217, 226, 0.92) 100%)
+
+.header
+  padding: 26px 0
+
+  &__inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__right
+    display: flex
+    align-items: center
+    max-width: 430px
+    width: 100%    
+
+    @include _1200
+      justify-content: flex-end
+
+  &__num
+    display: block
+    font-weight: 300
+    margin-right: 32px
+    color: #fff
+
+    @include _1400
+      font-size: 18px
+
+    @include _1200
+      color: #000
+      text-align: center
+      margin-right: 0
+
+    &--main
+      @include _1200
+        display: none
+
+    &--small
+      display: none
+
+      @include _1200
+        display: block
+
+  &__btn
+    font-size: 16px
+
+.logo
+  margin-bottom: 7px
+
+  &__img
+    width: 100%
+
+.menu
+  margin: 0 20px
+
+  @include _1200
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    min-height: 100vh
+    background-color: #fff
+    z-index: 100
+    margin: 0
+    padding: 130px 30px 30px 30px
+    transform: translateY(-100%)
+
+  &__list
+    display: flex
+    align-items: center
+
+    @include _1200
+      display: block
+      margin-bottom: 100px
+
+  &__item
+    @include _1200
+      text-align: center
+    
+    &:not(:last-child)
+      margin-right: 76px
+
+      @include _1400
+        margin-right: 30px
+
+      @include _1200
+        margin-right: 0
+        margin-bottom: 36px
+
+  &__link
+    color: #fff
+    font-weight: 300
+    white-space: nowrap
+
+    @include _1400
+      font-size: 18px
+
+    @include _1200
+      color: #000
+      padding: 10px 0
+
+.top
+  padding: 100px 0 135px
+
+  &__inner
+    display: flex
+    justify-content: space-between
+
+  &__left
+    max-width: 700px
+    width: 100%
+
+  &__title
+    margin-bottom: 16px
+
+  &__subtitle
+    display: block
+    font-size: 24px
+    font-weight: 300
+    margin-bottom: 46px
+
+  &__box
+    display: flex
+
+  &__btn
+    padding: 18.5px 5px
+    line-height: 158%
+
+    &--first
+      max-width: 202px
+      margin-right: 32px
+
+  &__right
+    margin-top: -185px
+    max-width: 900px
+    pointer-events: none
+
+  &__img
+    width: 100%
+
+.about
+  padding-top: 135px
+
+  &__inner
+    background-color: #fff
+    border-top-left-radius: 100px
+    border-top-right-radius: 100px
+    padding: 62px 127px 0 127px
+    filter: drop-shadow(0px 4px 70px rgba(0, 0, 0, 0.25))
+    color: #000000
+    overflow: hidden
+
+  &__title
+    color: #3F82D0
+
+  &__text
+    margin-bottom: 74px
+    line-height: 33px
+    font-size: 24px
+
+  &__subtitle
+    display: block
+    margin-bottom: 45px
+    font-size: 24px
+
+  &__items
+    display: flex
+    justify-content: space-between
+    margin-bottom: 52px
+
+  &__item
+    position: relative
+    left: 0
+    max-width: 341px
+    width: 100%
+    border-radius: 35px
+
+    &:hover
+      .about__item-content
+        background-color: #3F82D0
+        transition: background-color .3s
+
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: rgba(255,255,255, 0.2)
+      backdrop-filter: blur(50px)
+      top: 0
+      left: 0
+      z-index: 2
+      border-radius: 35px
+      
+    &:first-child
+      .about__item-content
+        &::before
+          content: ''
+          position: absolute
+          min-width: 1585px
+          min-height: 475px
+          height: 100%
+          background-image: url('../img/about-bg.svg')
+          background-repeat: no-repeat
+          background-size: cover
+          left: 100%
+          top: -40px
+          z-index: 1
+          pointer-events: none
+          transform: translateX(-34%)
+
+      .about__item-text
+        &::before
+          background-image: url('../img/icons/about-2.png')
+
+    &:nth-child(2)
+      margin: 0 30px
+
+      .about__item-text
+        &::before
+          background-image: url('../img/icons/about-1.png')
+
+    &:last-child
+      .about__item-text
+        &::before
+          background-image: url('../img/icons/about-3.png')
+
+  &__item-content
+    border-radius: 35px
+    width: 100%
+    height: 100%
+    padding: 79px 15px 97px 15px
+    background-color: #53D9E2
+    transition: background-color .3s
+
+  &__item-text
+    position: relative
+    font-size: 35px
+    font-weight: 700
+    line-height: 48px
+    padding-top: 110px
+    color: #ffffff
+    text-align: center
+    z-index: 3
+
+    &::before
+      content: ''
+      position: absolute
+      background-repeat: no-repeat
+      background-size: contain
+      width: 78px
+      height: 78px
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+
+  &__box
+    text-align: center
+
+  &__btn
+    background-image: linear-gradient(113deg, #3F82D0 0%, rgba(0, 213, 227, 0.63) 100%)
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset
+    color: #FFF
+
+.team
+  &__wrapper
+    position: relative
+
+    &::before
+      content: ''
+      position: absolute
+      width: 100%
+      max-height: 230px
+      height: 100%
+      background-color: #FFF
+      left: 0
+      top: 0
+      z-index: 2
+      border-bottom-right-radius: 151px 
+      border-bottom-left-radius: 151px
+
+  &__inner
+    position: relative
+    padding: 240px 185px 115px 185px
+    border-bottom-right-radius: 151px 
+    border-bottom-left-radius: 151px
+    background-color: rgba(255, 255, 255, 0.20)
+    backdrop-filter: blur(50px)
+    z-index: 3
+
+  &__title
+    margin-bottom: 98px
+    text-align: center
+
+  &__items
+    display: flex
+    flex-wrap: wrap
+    justify-content: center 
+    gap: 125px
+    margin-bottom: 100px
+    
+  &__item
+    border-radius: 35px
+    background-color: #fff
+    padding: 32px
+    max-width: 318px
+
+  &__box
+    margin-bottom: 36px
+
+  &__img
+    width: 100%
+    border-radius: 25px
+    
+  &__name
+    color: black
+    margin-bottom: 26px
+    font-weight: 600
+    margin-left: 3px
+
+  &__post
+    display: block
+    color: black
+    margin-left: 3px
+
+  &__text
+    text-align: center
+    line-height: 33px
+
+.why
+  padding: 410px 0 150px 0 
+  &__inner
+    display: flex
+    align-items: center
+    overflow: hidden
+
+  &__left
+    width: 776px
+
+  &__right
+    max-width: 825px
+
+  &__items
+    list-style: none
+    max-width: 796px
+    width: 100%
+
+  &__item
+    padding-left: 111px
+    position: relative
+
+    &:not(:last-child)
+      padding-bottom: 37px
+
+    &:first-child
+      margin-left: 53px
+
+      .why__numb
+        background-image: url('../img/icons/why-one.svg')
+
+    &:nth-child(2)
+      .why__numb
+        background-image: url('../img/icons/why-three.svg')
+        background-position: left
+
+    &:last-child
+      margin-left: 12px
+
+      .why__numb
+        background-image: url('../img/icons/why-two.svg')
+        padding: 0 14px 6px 0
+
+  &__numb
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    background-repeat: no-repeat
+    background-position: center
+    font-size: 48px
+    font-weight: 600
+    max-width: 92px
+    width: 100%
+    max-height: 83px
+    height: 100%
+    left: 0
+    top: 0
+
+  &__item-title
+    position: relative
+  
+  &__item-title
+    font-size: 32px
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+
+  &__item-text
+    display: block
+    font-size: 18px
+    font-style: normal
+    font-weight: 300
+    line-height: normal
+
+.portfolio
+  padding-bottom: 175px
+  padding-top: 150px
+  overflow: hidden
+
+  &__inner
+    position: relative
+    padding: 92px 0 105px
+
+    &::before
+      content: ''
+      position: absolute
+      max-width: 796px
+      width: 100%
+      height: 100%
+      background-color: #FCFCFC
+      border-radius: 91px
+      left: 0
+      top: 0
+
+  &__work-title
+    position: relative
+    display: inline-block
+    background: linear-gradient(137deg, #3F82D0 0%, rgba(1, 240, 255, 0.92) 100%)
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    margin-left: 161px
+    margin-bottom: 49px
+
+  &__slider
+    overflow: visible
+
+  &__project
+    display: flex
+    margin-left: -200px
+
+  &__item
+    display: flex
+    justify-content: center
+    align-items: center
+    max-width: 774px
+    width: 100%
+    min-height: 540px
+    background-color: rgba(255, 255, 255, 0.40)
+    backdrop-filter: blur(50px)
+    border-radius: 77px
+
+  &__item-title
+    color: #3F82D0
+    font-size: 48px
+    font-weight: 600
+
+.contacts
+  padding: 356px 0 393px 0
+
+  &__inner
+    display: flex
+    align-items: center 
+
+  &__title
+    padding-bottom: 14px
+    font-size: 48px
+    font-style: normal
+    font-weight: 700
+    line-height: normal
+
+  &__text 
+    color: #F8F8F8
+    font-family: Manrope
+    font-size: 24px
+    font-style: normal
+    font-weight: 300
+    line-height: normal
+    padding-bottom: 43px
+
+    & p
+      &:not(:last-child)
+        margin-bottom: 43px
+
+  &__btn
+    position: relative
+    border-radius: 25px
+    border: 3px solid #FFF
+    padding: 17px 5px 17px 25px
+
+    &::before
+      content: ''
+      position: absolute
+      width: 40px
+      height: 40px
+      background-repeat: no-repeat
+      background-size: contain
+      left: 18px
+      top: 50%
+      transform: translateY(-50%)
+      background-image: url("../img/icons/telegram.png")
+
+    &:first-child
+      margin-right: 45px 
+      
+    &:last-child
+      &::before
+        width: 50px
+        height: 50px
+        background-image: url("../img/icons/whats up.png")
+
+  &__num
+    display: block
+    color: white
+    margin-top: 43px
+    margin-bottom: 20px
