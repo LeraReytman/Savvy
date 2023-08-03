@@ -1,5 +1,6 @@
 $(function(){
 
+<<<<<<< HEAD
   let swiper = new Swiper(".swiper-one", {
 
     slidesPerView: 2,
@@ -17,5 +18,7 @@ $(function(){
     }, 
 
   });
+=======
+>>>>>>> master
   
 });
