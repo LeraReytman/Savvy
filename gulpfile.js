@@ -40,6 +40,7 @@ function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/swiper/swiper-bundle.min.js',
+    'node_modules/locomotive-scroll/dist/locomotive-scroll.min.js',
     // 'node_modules/mixitup/dist/mixitup.js',
     // 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     // 'node_modules/ion-rangeslider/js/ion.rangeSlider.js',

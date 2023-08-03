@@ -66,3 +66,39 @@ button
   @include _575
     font-size: 32px
     margin-bottom: 16px
+
+.btn-anim-color
+  border: 1px solid transparent
+  transition: background-color .3s, border-color .3s, color .3s
+
+  &:hover
+    background-color: transparent
+    border-color: #fff
+    color: #fff
+    transition: background-color .3s, border-color .3s, color .3s
+
+.btn-anim-border
+  transition: background-color .3s, color .3s
+
+  &:hover
+    background-color: #fff
+    color: #000
+    transition: background-color .3s, color .3s
+
+.anim-line
+  position: relative
+
+  &::before
+    content: ''
+    position: absolute
+    width: 0
+    height: 2px
+    background-color: #fff
+    bottom: 0
+    left: 0
+    transition: width .3s
+
+  &:hover
+    &::before
+      width: 100%
+      transition: width .3s
