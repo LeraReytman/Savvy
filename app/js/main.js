@@ -1,6 +1,12 @@
 $(function(){
 
-<<<<<<< HEAD
+  $('.header__burger').on('click', function() {
+
+    $('.menu').toggleClass('menu--active')
+    $(this).toggleClass('header__burger--active')
+
+  })
+
   let swiper = new Swiper(".swiper-one", {
 
     slidesPerView: 2,
@@ -18,7 +24,5 @@ $(function(){
     }, 
 
   });
-=======
->>>>>>> master
   
 });

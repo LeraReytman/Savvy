@@ -3,6 +3,7 @@ body
   font-size: 20px
   font-weight: 400
   color: #fff
+  overflow-x: hidden
 
 button
   font-family: 'Manrope'
@@ -23,6 +24,17 @@ button
   border-radius: 20px
   font-size: 20px
 
+  @include _1200
+    max-width: 180px
+    border-radius: 12px
+    padding: 10px 5px
+    font-size: 14px
+
+  @include _575
+    max-width: 153px
+    padding: 6px 5px
+    border-radius: 8px
+
   &--two
     background-color: transparent
     border: 1px solid #FFF
@@ -34,8 +46,23 @@ button
   text-transform: uppercase
   line-height: 87px
 
+  @include _1200
+    font-size: 48px
+    line-height: 124%
+
+  @include _991
+    font-size: 36px
+
 .title-two
   font-size: 48px
   font-weight: 600
   color: #ffffff
   margin-bottom: 28px
+
+  @include _1200
+    font-size: 38px
+    margin-bottom: 18px
+
+  @include _575
+    font-size: 32px
+    margin-bottom: 16px

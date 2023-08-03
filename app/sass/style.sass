@@ -13,6 +13,9 @@
 .header
   padding: 26px 0
 
+  @include _767
+    padding: 14px 0
+
   &__inner
     display: flex
     align-items: center
@@ -54,11 +57,83 @@
   &__btn
     font-size: 16px
 
+    @include _1200
+      font-size: 12px
+
+    @include _575
+      font-size: 10px
+
+  &__burger
+    display: none
+    width: 24px
+    height: 16px
+    background-color: transparent
+    margin-left: 16px
+    position: relative
+    z-index: 102
+    transition: transform 1s
+
+    @include _1200
+      display: block
+
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 2px
+      left: 0
+      background-color: #ffffff
+
+    &::before
+      top: 0
+      transition: background-color 1s, opacity 1s
+
+    &::after
+      bottom: 0
+      transition: background-color 1s, transform 1s
+
+    &--active
+      transform: rotate(45deg)
+      transition: transform 1s
+
+      &::before,
+      &::after
+        background-color: #3F82D0
+
+      &::before
+        opacity: 0
+        transition: background-color 1s, opacity 1s
+
+      &::after
+        transform: rotate(90deg) translateX(-7px)
+        transition: background-color 1s, transform 1s
+
+      .header__burger-icon
+        background-color: #3F82D0
+        transition: background-color 1s
+
+  &__burger-icon
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 2px
+    width: 100%
+    background-color: #ffffff
+    transition: background-color 1s, transform 1s
+
 .logo
+  display: block
   margin-bottom: 7px
+
+  @include _575
+    margin-right: 20px
 
   &__img
     width: 100%
+
+    @include _575
+      max-width: 120px
 
 .menu
   margin: 0 20px
@@ -73,7 +148,34 @@
     z-index: 100
     margin: 0
     padding: 130px 30px 30px 30px
-    transform: translateY(-100%)
+    transform: translatex(100%)
+    transition: transform cubic-bezier(.11,.75,.48,.98) 1s
+
+  &--active
+    transform: translatex(0)
+    transition: transform cubic-bezier(.11,.75,.48,.98) 1s
+
+  &--footer
+    padding: 5px 0 27px 44px
+    position: relative
+
+    &::before
+      content: ''
+      position: absolute
+      height: 100%
+      width: 3px
+      background-color: #fff
+      left: 0
+      top: 0
+
+    .menu__list
+      flex-wrap: wrap
+      gap: 46px 0
+      max-width: 760px
+
+    .menu__item
+      &:not(:last-child)
+        margin-right: 46px
 
   &__list
     display: flex
@@ -112,13 +214,26 @@
 .top
   padding: 100px 0 135px
 
+  @include _767
+    padding: 36px 0
+
   &__inner
     display: flex
     justify-content: space-between
 
+    @include _767
+      display: block
+
   &__left
     max-width: 700px
     width: 100%
+
+    @include _1200
+      max-width: 520px
+
+    @include _767
+      max-width: 450px
+      margin: 0 auto
 
   &__title
     margin-bottom: 16px
@@ -129,27 +244,61 @@
     font-weight: 300
     margin-bottom: 46px
 
+    @include _1200
+      font-size: 20px
+
+    @include _767
+      font-size: 16px
+      margin-bottom: 26px
+
   &__box
     display: flex
+
+    @include _767
+      display: block
 
   &__btn
     padding: 18.5px 5px
     line-height: 158%
 
+    @include _767
+      max-width: 202px
+
+    @include _1200
+      padding: 9px 5px
+
     &--first
       max-width: 202px
       margin-right: 32px
+
+      @include _767
+        display: block
+        margin-right: 0
+        margin-bottom: 16px
+
+    &--second
+      @include _767
+        padding: 8px 5px
 
   &__right
     margin-top: -185px
     max-width: 900px
     pointer-events: none
 
+    @include _1400
+      margin-top: 0
+
+    @include _767
+      display: none
+
   &__img
     width: 100%
 
 .about
   padding-top: 135px
+
+  @include _767
+    padding-top: 16px
 
   &__inner
     background-color: #fff
@@ -160,6 +309,16 @@
     color: #000000
     overflow: hidden
 
+    @include _1200
+      padding: 62px 62px 0 62px
+      border-top-left-radius: 56px
+      border-top-right-radius: 56px
+
+    @include _575
+      padding: 32px 20px 0 20px
+      border-top-left-radius: 32px
+      border-top-right-radius: 32px
+
   &__title
     color: #3F82D0
 
@@ -168,15 +327,40 @@
     line-height: 33px
     font-size: 24px
 
+    @include _1200
+      font-size: 20px
+      margin-bottom: 45px
+
+    @include _767
+      font-size: 18px
+      line-height: 38px
+      margin-bottom: 26px
+
+    @include _575
+      font-size: 16px
+      line-height: 22px
+
   &__subtitle
     display: block
     margin-bottom: 45px
     font-size: 24px
 
+    @include _1200
+      font-size: 20px
+
+    @include _767
+      font-size: 18px
+
+    @include _575
+      font-size: 16px
+
   &__items
     display: flex
     justify-content: space-between
     margin-bottom: 52px
+
+    @include _767
+      display: block
 
   &__item
     position: relative
@@ -184,6 +368,9 @@
     max-width: 341px
     width: 100%
     border-radius: 35px
+
+    @include _767
+      max-width: 100%
 
     &:hover
       .about__item-content
@@ -219,12 +406,27 @@
           pointer-events: none
           transform: translateX(-34%)
 
+          @include _767
+            left: auto
+            right: -50%
+            top: 103%
+            transform: translateX(16%) rotate(90deg)
+            min-width: 1300px
+            min-height: 360px
+            background-size: contain
+
+          @include _575
+            transform: translateX(20%) rotate(90deg)
+
       .about__item-text
         &::before
           background-image: url('../img/icons/about-2.png')
 
     &:nth-child(2)
       margin: 0 30px
+
+      @include _767
+        margin: 30px 0
 
       .about__item-text
         &::before
@@ -252,6 +454,17 @@
     color: #ffffff
     text-align: center
     z-index: 3
+
+    @include _1400
+      font-size: 26px
+      line-height: 36px
+
+    @include _991
+      font-size: 17px
+      line-height: 26px
+
+    @include _767
+      font-size: 18px
 
     &::before
       content: ''
@@ -289,6 +502,16 @@
       border-bottom-right-radius: 151px 
       border-bottom-left-radius: 151px
 
+      @include _1200
+        border-bottom-right-radius: 56px 
+        border-bottom-left-radius: 56px
+        max-height: 130px
+
+      @include _575
+        max-height: 65px
+        border-bottom-right-radius: 32px 
+        border-bottom-left-radius: 32px
+
   &__inner
     position: relative
     padding: 240px 185px 115px 185px
@@ -298,9 +521,24 @@
     backdrop-filter: blur(50px)
     z-index: 3
 
+    @include _1200
+      backdrop-filter: blur(15px)
+      padding: 170px 62px 60px 62px
+      border-bottom-right-radius: 56px 
+      border-bottom-left-radius: 56px
+
+    @include _575
+      padding: 100px 20px 36px 20px
+      border-bottom-right-radius: 32px 
+      border-bottom-left-radius: 32px
+      backdrop-filter: blur(8px)
+
   &__title
     margin-bottom: 98px
     text-align: center
+
+    @include _767
+      margin-bottom: 66px
 
   &__items
     display: flex
@@ -308,6 +546,15 @@
     justify-content: center 
     gap: 125px
     margin-bottom: 100px
+
+    @include _1200
+      gap: 56px
+
+    @include _767
+      margin-bottom: 46px
+
+    @include _575
+      gap: 26px
     
   &__item
     border-radius: 35px
@@ -315,12 +562,25 @@
     padding: 32px
     max-width: 318px
 
+    @include _991
+      max-width: 280px
+
+    @include _767
+      padding: 16px 16px 26px 16px
+      border-radius: 22px
+
   &__box
     margin-bottom: 36px
+
+    @include _767
+      margin-bottom: 26px
 
   &__img
     width: 100%
     border-radius: 25px
+
+    @include _767
+      border-radius: 18px
     
   &__name
     color: black
@@ -328,14 +588,36 @@
     font-weight: 600
     margin-left: 3px
 
+    @include _991
+      font-size: 18px
+      margin-bottom: 16px
+
+    @include _767
+      font-size: 16px
+      margin-bottom: 12px
+
   &__post
     display: block
     color: black
     margin-left: 3px
 
+    @include _991
+      font-size: 16px
+
+    @include _767
+      font-size: 14px
+
   &__text
     text-align: center
     line-height: 33px
+
+    @include _767
+      font-size: 18px
+      line-height: 28px
+
+    @include _575
+      font-size: 16px
+      line-height: 27px
 
 .why
   padding: 410px 0 150px 0 
@@ -524,238 +806,6 @@
     color: white
     margin-top: 43px
     margin-bottom: 20px
-
-.top
-  padding: 100px 0 135px
-
-  &__inner
-    display: flex
-    justify-content: space-between
-
-  &__left
-    max-width: 700px
-    width: 100%
-
-  &__title
-    margin-bottom: 16px
-
-  &__subtitle
-    display: block
-    font-size: 24px
-    font-weight: 300
-    margin-bottom: 46px
-
-  &__box
-    display: flex
-
-  &__btn
-    padding: 18.5px 5px
-    line-height: 158%
-
-    &--first
-      max-width: 202px
-      margin-right: 32px
-
-  &__right
-    margin-top: -185px
-    max-width: 900px
-
-  &__img
-    width: 100%
-
-.about
-  padding-top: 135px
-
-  &__inner
-    background-color: #fff
-    border-top-left-radius: 100px
-    border-top-right-radius: 100px
-    padding: 62px 127px 0 127px
-    filter: drop-shadow(0px 4px 70px rgba(0, 0, 0, 0.25))
-    color: #000000
-    overflow: hidden
-
-  &__title
-    color: #3F82D0
-
-  &__text
-    margin-bottom: 74px
-    line-height: 33px
-    font-size: 24px
-
-  &__subtitle
-    display: block
-    margin-bottom: 45px
-    font-size: 24px
-
-  &__items
-    display: flex
-    justify-content: space-between
-    margin-bottom: 52px
-
-  &__item
-    position: relative
-    left: 0
-    max-width: 341px
-    width: 100%
-    border-radius: 35px
-
-    &:hover
-      .about__item-content
-        background-color: #3F82D0
-        transition: background-color .3s
-
-    &::after
-      content: ''
-      position: absolute
-      width: 100%
-      height: 100%
-      background-color: rgba(255,255,255, 0.2)
-      backdrop-filter: blur(50px)
-      top: 0
-      left: 0
-      z-index: 2
-      border-radius: 35px
-      
-    &:first-child
-      .about__item-content
-        &::before
-          content: ''
-          position: absolute
-          min-width: 1585px
-          min-height: 475px
-          height: 100%
-          background-image: url('../img/about-bg.svg')
-          background-repeat: no-repeat
-          background-size: cover
-          left: 100%
-          top: -40px
-          z-index: 1
-          pointer-events: none
-          transform: translateX(-34%)
-
-      .about__item-text
-        &::before
-          background-image: url('../img/icons/about-2.png')
-
-    &:nth-child(2)
-      margin: 0 30px
-
-      .about__item-text
-        &::before
-          background-image: url('../img/icons/about-1.png')
-
-    &:last-child
-      .about__item-text
-        &::before
-          background-image: url('../img/icons/about-3.png')
-
-  &__item-content
-    border-radius: 35px
-    width: 100%
-    height: 100%
-    padding: 79px 15px 97px 15px
-    background-color: #53D9E2
-    transition: background-color .3s
-
-  &__item-text
-    position: relative
-    font-size: 35px
-    font-weight: 700
-    line-height: 48px
-    padding-top: 110px
-    color: #ffffff
-    text-align: center
-    z-index: 3
-
-    &::before
-      content: ''
-      position: absolute
-      background-repeat: no-repeat
-      background-size: contain
-      width: 78px
-      height: 78px
-      top: 0
-      left: 50%
-      transform: translateX(-50%)
-
-  &__box
-    text-align: center
-
-  &__btn
-    background-image: linear-gradient(113deg, #3F82D0 0%, rgba(0, 213, 227, 0.63) 100%)
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset
-    color: #FFF
-
-.team
-  &__wrapper
-    position: relative
-
-    &::before
-      content: ''
-      position: absolute
-      width: 100%
-      max-height: 230px
-      height: 100%
-      background-color: #FFF
-      left: 0
-      top: 0
-      z-index: 2
-      border-bottom-right-radius: 151px 
-      border-bottom-left-radius: 151px
-
-  &__inner
-    position: relative
-    padding: 240px 185px 115px 185px
-    border-bottom-right-radius: 151px 
-    border-bottom-left-radius: 151px
-    background-color: rgba(255, 255, 255, 0.20)
-    backdrop-filter: blur(50px)
-    z-index: 3
-
-  &__title
-    margin-bottom: 98px
-    text-align: center
-
-  &__items
-    display: flex
-    flex-wrap: wrap
-    justify-content: center 
-    gap: 125px
-    margin-bottom: 100px
-    
-  &__item
-    border-radius: 35px
-    background-color: #fff
-    padding: 32px
-    max-width: 318px
-
-  &__box
-    margin-bottom: 36px
-
-  &__img
-    width: 100%
-    border-radius: 25px
-    
-  &__name
-    color: black
-    margin-bottom: 26px
-    font-weight: 600
-    margin-left: 3px
-
-  &__post
-    display: block
-    color: black
-    margin-left: 3px
-
-  &__text
-    text-align: center
-    line-height: 33px
-
-.why
-  &__inner
-    display: flex
-    align-items: center
 
 .decision-top
   padding-bottom: 80px
