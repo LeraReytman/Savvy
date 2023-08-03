@@ -28,5 +28,8 @@
     "mixitup": "^3.3.1",
     "rateyo": "^2.3.2",
     "wow.js": "^1.2.2"
+  },
+  "dependencies": {
+    "swiper": "^8.4.7"
   }
 }
