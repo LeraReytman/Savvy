@@ -93,7 +93,7 @@
 
     &::before
       top: 0
-      transition: background-color 1s, opacity 1s
+      transition: background-color .3s, opacity .3s
 
     &::after
       bottom: 0
@@ -109,7 +109,7 @@
 
       &::before
         opacity: 0
-        transition: background-color 1s, opacity 1s
+        transition: background-color .3s, opacity .3s
 
       &::after
         transform: rotate(90deg) translateX(-7px)
@@ -130,7 +130,6 @@
 
 .logo
   display: block
-  margin-bottom: 7px
 
   @include _575
     margin-right: 20px
@@ -144,18 +143,29 @@
 .menu
   margin: 0 20px
 
-  @include _1200
-    position: absolute
-    left: 0
-    top: 0
-    width: 100%
-    min-height: 100vh
-    background-color: #fff
-    z-index: 100
-    margin: 0
-    padding: 130px 30px 30px 30px
-    transform: translatex(100%)
-    transition: transform cubic-bezier(.11,.75,.48,.98) 1s
+  &--header
+    @include _1200
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      min-height: 100vh
+      background-color: #fff
+      z-index: 100
+      margin: 0
+      padding: 130px 30px 30px 30px
+      transform: translatex(100%)
+      transition: transform cubic-bezier(.11,.75,.48,.98) 1s
+
+    .menu__list
+      @include _1200
+        display: block
+        margin-bottom: 100px
+
+    .menu__link
+      @include _1200
+        color: #000
+        padding: 10px 0
 
   &--active
     transform: translatex(0)
@@ -164,6 +174,11 @@
   &--footer
     padding: 5px 0 27px 44px
     position: relative
+
+    @include _767
+      max-width: 490px
+      margin: 0 auto 32px auto
+      padding: 15px 0 25px 12px
 
     &::before
       content: ''
@@ -179,17 +194,26 @@
       gap: 46px 0
       max-width: 760px
 
+      @include _1200
+        gap: 26px
+
+      @include _767
+        justify-content: center
+
     .menu__item
       &:not(:last-child)
         margin-right: 46px
 
+        @include _1200
+          margin-right: 26px
+          margin-bottom: 0
+
+          @include _767
+            margin-right: 0
+
   &__list
     display: flex
     align-items: center
-
-    @include _1200
-      display: block
-      margin-bottom: 100px
 
   &__item
     @include _1200
@@ -215,10 +239,6 @@
     @include _1400
       font-size: 18px
 
-    @include _1200
-      color: #000
-      padding: 10px 0
-
     &::before
       content: ''
       position: absolute
@@ -239,7 +259,8 @@
   min-height: calc(100vh - 123px)
 
   @include _767
-    padding: 36px 0 20px
+    padding: 42px 0 120px
+    min-height: 100%
 
   &__inner
     display: flex
@@ -262,6 +283,12 @@
   &__title
     margin-bottom: 16px
     line-height: 70px
+
+    @include _991
+      line-height: 48px
+
+    @include _767
+      line-height: 42px
 
   &__subtitle
     display: block
@@ -658,18 +685,39 @@
       line-height: 27px
 
 .why
-  padding: 410px 0 150px 0
+  padding: 200px 0 100px 0
+
+  @include _767
+    padding: 60px 0
   
   &__inner
     display: flex
     align-items: center
     overflow: hidden
 
+    @include _991
+      display: block
+
   &__left
-    width: 776px
+    max-width: 776px
+
+    @include _1400
+      max-width: 560px
+
+    @include _991
+      margin: 0 auto 36px auto
+
+    @include _767
+      margin: 0 auto
+
+  &__img
+    width: 100%
 
   &__right
     max-width: 825px
+
+    @include _991
+      margin: 0 auto
 
   &__items
     list-style: none
@@ -680,11 +728,23 @@
     padding-left: 111px
     position: relative
 
+    @include _1200
+      padding-left: 85px
+
+    @include _767
+      padding-left: 68px
+
     &:not(:last-child)
       padding-bottom: 37px
 
     &:first-child
       margin-left: 53px
+
+      @include _1200
+        margin-left: 35px
+
+      @include _767
+        margin-left: 28px
 
       .why__numb
         background-image: url('../img/icons/why-one.svg')
@@ -700,6 +760,9 @@
       .why__numb
         background-image: url('../img/icons/why-two.svg')
         padding: 0 14px 6px 0
+
+        @include _767
+          padding: 0 11px 3px 0
 
   &__numb
     display: flex
@@ -718,6 +781,17 @@
     opacity: 0
     top: 0
 
+    @include _1200
+      font-size: 28px
+      max-width: 70px
+      max-height: 63px
+      background-size: contain
+
+    @include _767
+      font-size: 22px
+      max-width: 55px
+      max-height: 47px
+
     &--visible
       left: 0
       opacity: 1
@@ -725,29 +799,46 @@
       transition-delay: .3s
 
   &__item-title
-    position: relative
-  
-  &__item-title
     font-size: 32px
-    font-style: normal
     font-weight: 600
     line-height: normal
+    position: relative
+
+    @include _1200
+      font-size: 22px
+
+    @include _767
+      font-size: 20px
+      line-height: 22px
+      margin-bottom: 5px
 
   &__item-text
     display: block
     font-size: 18px
-    font-style: normal
     font-weight: 300
     line-height: normal
 
+    @include _1200
+      font-size: 16px
+      line-height: 25px
+
+    @include _767
+      font-size: 14px
+      line-height: 23px
+
 .portfolio
-  padding-bottom: 175px
-  padding-top: 150px
+  padding: 100px 0
   overflow: hidden
+
+  @include _767
+    padding: 60px 0
 
   &__inner
     position: relative
     padding: 92px 0 105px
+
+    @include _767
+      padding: 60px 0 90px
 
   &__bg
     display: block
@@ -760,6 +851,12 @@
     left: 0
     top: 0
 
+    @include _991
+      border-radius: 55px
+
+    @include _575
+      border-radius: 42px
+
   &__work-title
     position: relative
     display: inline-block
@@ -770,6 +867,9 @@
     margin-left: 161px
     margin-bottom: 49px
 
+    @include _991
+      margin-left: 80px
+
   &__slider
     overflow: visible
 
@@ -777,35 +877,88 @@
     display: flex
     margin-left: -200px
 
-  &__item
+    @include _991
+      margin-left: -80px
+
+  &__item-link
     display: flex
     justify-content: center
     align-items: center
     max-width: 774px
     width: 100%
-    min-height: 540px
+    height: auto
     background-color: rgba(255, 255, 255, 0.40)
     backdrop-filter: blur(50px)
+    padding: 42px
     border-radius: 77px
 
-  &__item-title
-    color: #3F82D0
-    font-size: 48px
-    font-weight: 600
+    @include _991
+      padding: 3vw
+      border-radius: 40px
+
+    @include _767
+      border-radius: 3.2vw
+
+    &:hover
+      .portfolio__item-box
+        &::before
+          opacity: 1
+          border-radius: 67px
+          transition: opacity .3s, border-radius .3s
+
+          @include _1400
+            border-radius: 56px
+
+          @include _991
+            border-radius: 30px
+
+          @include _767
+            border-radius: 2.5vw
+
+  &__item-box
+    position: relative
+
+    &::before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: rgba(0,0,0, 0.5)
+      left: 0
+      top: 0
+      opacity: 0
+      border-radius: 200px
+      transition: opacity .3s, border-radius .3s
+
+  &__item-img
+    width: 100%
+    border-radius: 67px
+
+    @include _1400
+      border-radius: 56px
+
+    @include _991
+      border-radius: 30px
+
+    @include _767
+      border-radius: 2.5vw
 
 .contacts
-  padding: 356px 0 393px 0
+  padding: 150px 0 300px 0
+
+  @include _767
+    padding: 60px 0 150px 0
 
   &__inner
     display: flex
     align-items: center 
 
-  &__title
-    padding-bottom: 14px
-    font-size: 48px
-    font-style: normal
-    font-weight: 700
-    line-height: normal
+    @include _991
+      display: block
+
+  &__left
+    @include _991
+      margin-bottom: 42px
 
   &__text 
     color: #F8F8F8
@@ -816,36 +969,69 @@
     line-height: normal
     padding-bottom: 43px
 
+    @include _1200
+      font-size: 20px
+
+    @include _767
+      font-size: 16px
+      padding-bottom: 22px
+
     & p
       &:not(:last-child)
         margin-bottom: 43px
+
+        @include _767
+          margin-bottom: 16px
+
+  &__box
+    display: flex
 
   &__btn
     position: relative
     border-radius: 25px
     border: 3px solid #FFF
-    padding: 17px 5px 17px 25px
+    padding: 17px 5px 17px 20px
+    
+    @include _1200
+      padding: 17px 5px 17px 32px
 
-    &::before
-      content: ''
-      position: absolute
-      width: 40px
-      height: 40px
-      background-repeat: no-repeat
-      background-size: contain
-      left: 18px
-      top: 50%
-      transform: translateY(-50%)
-      background-image: url("../img/icons/telegram.png")
+    @include _767
+      padding: 10px 5px 10px 22px
+      border-radius: 20px
 
-    &:first-child
-      margin-right: 45px 
-      
-    &:last-child
-      &::before
-        width: 50px
-        height: 50px
-        background-image: url("../img/icons/whats up.png")
+    &--first
+      margin-right: 45px
+
+      @include _991
+        margin-right: 22px
+
+      @include _575
+        margin-right: 8px
+
+  &__btn-icon
+    position: absolute
+    fill: #fff
+    width: 32px
+    height: 32px
+    left: 26px
+    top: 50%
+    transform: translateY(-50%)
+
+    @include _767
+      width: 22px
+      height: 22px
+      left: 20px
+
+    @include _1200
+      left: 15px
+    
+    svg
+      width: 32px
+      height: 32px
+
+      @include _767
+        width: 22px
+        height: 22px
 
   &__num
     display: inline-block
@@ -853,6 +1039,20 @@
     padding-bottom: 6px
     margin-top: 43px
     margin-bottom: 20px
+
+    @include _767
+      margin-top: 32px
+      font-size: 18px
+
+  &__right
+    @include _991
+      text-align: center
+
+  &__img
+    max-width: 600px
+
+    @include _991
+      width: 100%
 
 .decision-top
   padding-bottom: 80px
@@ -973,11 +1173,6 @@
     left: 0
     top: 0
     z-index: 4
-    // transition: transform 1s
-
-    // &:hover
-    //   transform: rotate(360deg) 
-    //   transition: transform 1s
 
   &__bg-small
     position: absolute
@@ -1000,11 +1195,6 @@
     width: 100%
     max-height: 238px
     height: 100%
-    // transition: transform 1s
-
-    // &:hover
-    //   transform: rotate(360deg)
-    //   transition: transform 1s
 
   &__bg-one
     top: 51px
@@ -1182,13 +1372,38 @@
   padding: 103px 0 71px
   background-color: #3F82D0
 
+  @include _767
+    padding: 60px 0 60px
+
+  &__box
+    display: block
+    max-width: 200px
+    width: 100%
+    margin-right: 32px
+
+    @include _767
+      margin: 0 auto 32px auto
+
+  &__img
+    width: 100%
+
   &__inner
     display: flex
     justify-content: space-between
     align-items: center
+
+    @include _767
+      display: block
+
+  &__num-box
+    @include _767
+      text-align: center
 
   &__phone
     font-size: 24px
     font-weight: 800
     line-height: normal
     color: #fff
+
+    @include _767
+      font-size: 20px

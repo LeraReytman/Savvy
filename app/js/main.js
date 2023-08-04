@@ -5,55 +5,59 @@ $(function(){
     const scroll = new LocomotiveScroll({
 
       el: document.querySelector('[data-scroll-container]'),
-      smooth: true
+      smooth: true,
 
     });
   
     scroll.on('scroll', (args) => {
 
-      let servicesOne = $('.services__bg-one--one').offset().top + 200;
-      let servicesTwo = $('.services__bg-one--two').offset().top + 200;
-      let servicesThree = $('.services__bg-one--three').offset().top + 200;
+      if ($('.decision-wrapper').length) {
 
-      let wScroll = $('.decision-wrapper').offset().top;
-      wScroll = Math.abs(wScroll);
-      const height = $(window).height();
+        let servicesOne = $('.services__bg-one--one').offset().top + 200;
+        let servicesTwo = $('.services__bg-one--two').offset().top + 200;
+        let servicesThree = $('.services__bg-one--three').offset().top + 200;
 
-      console.log(wScroll)
+        let wScroll = $('.decision-wrapper').offset().top;
+        wScroll = Math.abs(wScroll);
+        const height = $(window).height();
 
-      console.log(servicesTwo + height)
+        console.log(wScroll)
 
-      const servicesOnePos = (wScroll + height - servicesOne);
-      const servicesTwoPos = (wScroll + height - servicesTwo);
-      const servicesThreePos = (wScroll + height - servicesThree);
+        console.log(servicesTwo + height)
 
-      if (wScroll >= servicesOne) {
+        const servicesOnePos = (wScroll + height - servicesOne);
+        const servicesTwoPos = (wScroll + height - servicesTwo);
+        const servicesThreePos = (wScroll + height - servicesThree);
 
-        $('.services__bg-one--one').css({
+        if (wScroll >= servicesOne) {
 
-          'transform' : 'rotate(' + (servicesOnePos) * 0.2 + 'deg)'
+          $('.services__bg-one--one').css({
 
-        });
+            'transform' : 'rotate(' + (servicesOnePos) * 0.2 + 'deg)'
 
-      }
+          });
 
-      if (wScroll >= servicesTwo) {
+        }
 
-        $('.services__bg-one--two').css({
+        if (wScroll >= servicesTwo) {
 
-          'transform' : 'rotate(' + (servicesTwoPos) * 0.2 + 'deg)'
+          $('.services__bg-one--two').css({
 
-        });
+            'transform' : 'rotate(' + (servicesTwoPos) * 0.2 + 'deg)'
 
-      }
+          });
 
-      if (wScroll >= servicesThree) {
+        }
 
-        $('.services__bg-one--three').css({
+        if (wScroll >= servicesThree) {
 
-          'transform' : 'rotate(' + (servicesThreePos) * 0.2 + 'deg)'
+          $('.services__bg-one--three').css({
 
-        });
+            'transform' : 'rotate(' + (servicesThreePos) * 0.2 + 'deg)'
+
+          });
+
+        }
 
       }
 
@@ -81,8 +85,11 @@ $(function(){
 
   $('.header__burger').on('click', function() {
 
-    $('.menu').toggleClass('menu--active')
+    $('.menu--header').toggleClass('menu--active')
     $(this).toggleClass('header__burger--active')
+    $('body').toggleClass('body-hidden')
+    scroll.stop()
+    
 
   })
 
@@ -90,7 +97,7 @@ $(function(){
 
     slidesPerView: 2,
 
-    spaceBetween: 114,
+    spaceBetween: 32,
 
     speed: 1000,
 
@@ -101,6 +108,23 @@ $(function(){
       delay: 2000,
 
     }, 
+
+    breakpoints: {
+
+      767: {
+
+        spaceBetween: 60,
+
+      },
+
+
+      1200: {
+
+        spaceBetween: 114,
+
+      },
+
+    }
 
   });
   

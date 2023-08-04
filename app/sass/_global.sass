@@ -3,7 +3,9 @@ body
   font-size: 20px
   font-weight: 400
   color: #fff
-  overflow-x: hidden
+
+.body-hidden
+  overflow: hidden
 
 button
   font-family: 'Manrope'
@@ -80,10 +82,17 @@ button
 .btn-anim-border
   transition: background-color .3s, color .3s
 
+  svg
+    transition: fill .3s
+
   &:hover
     background-color: #fff
     color: #000
     transition: background-color .3s, color .3s
+
+    svg
+      fill: #000
+      transition: fill .3s
 
 .anim-line
   position: relative
