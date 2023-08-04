@@ -14,6 +14,9 @@
 .decision-wrapper
   background-image: linear-gradient(131deg, #60DBE3 0%, #3F82D0 80.39%)
 
+.study-wrapper
+  background-image: linear-gradient(119deg, #3F82D0 0%, rgba(83, 217, 226, 0.92) 100%)
+
 .header
   padding: 26px 0
 
@@ -1192,3 +1195,142 @@
     font-weight: 800
     line-height: normal
     color: #fff
+
+.edu
+  padding: 200px 0 180px
+
+  &__title
+    text-align: center
+    text-transform: none
+    font-size: 63px
+
+.study-about
+  padding: 180px 0 90px
+
+  &__inner
+    background-color: #fff
+    border-radius: 114px
+    padding: 82px 138px 119px 138px
+
+  &__title
+    font-size: 48px
+    font-weight: 700
+    line-height: normal
+    background-image: linear-gradient(106deg, #3F82D0 0%, rgba(1, 240, 255, 0.92) 100%)
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    text-align: center
+    padding-bottom: 28px
+  
+  &__text
+    color: #000
+    font-size: 24px
+    font-weight: 300
+    line-height: normal
+
+  &__box
+    text-align: center
+
+  &__img
+    width: 100%
+
+.steps
+  padding: 90px 0 150px
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    justify-content: center 
+    gap: 54px
+    list-style: none
+
+  &__item
+    max-width: 492px
+    width: 100%
+    min-height: 229px
+    flex-shrink: 0
+    border-radius: 30px
+    padding: 40px 0 22px 25px
+    background-color: rgba(255, 255, 255, 0.30)
+
+    &--hidden
+      opacity: 0
+      width: 2px
+
+      @include _1650
+        display: none
+
+  &__item-title
+    margin-bottom: 18px
+    
+  &__item-text
+    color: #FFF
+    font-size: 16px
+    font-weight: 300
+    line-height: normal
+
+.briefly
+  padding: 150px 0 120px
+
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__left
+    max-width: 823px
+    width: 100%
+    position: relative
+
+  &__img
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+
+  &__right
+    max-width: 769px
+
+  &__text
+    color: #FFF
+    font-size: 30px
+    font-weight: 400
+    line-height: normal
+
+.reviews
+  padding: 120px 0 130px
+
+  &__inner
+    min-width: 1600px
+    width: 100%
+    height: 100%
+    min-height: 700px
+    border-radius: 114px
+    background-color: rgba(255, 255, 255, 0.30)
+    backdrop-filter: blur(50px)
+   
+
+  &__title
+    color: #FFF
+    font-size: 36px
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+    text-align: center
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    justify-content: center 
+    gap: 54px
+    list-style-type: none
+
+  &__item
+    text-align: center
+    max-width: 485px
+    width: 100%
+    height: auto
+    flex-shrink: 0
+    padding: 40px 53px 62px 53px
+    background-color: rgba(255, 255, 255, 0.50);
+  
