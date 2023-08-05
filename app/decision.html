@@ -53,7 +53,7 @@
 
 <body>
 
-  <div class="decision-wrapper" data-scroll-container>
+  <div class="decision-wrapper" id="top-scroll" data-scroll-container>
 
     <header class="header">
       <div class="container">
@@ -61,7 +61,7 @@
           <a class="logo" href="#">
             <img class="logo__img" src="img/icons/logo.svg" alt="">
           </a>
-          <nav class="menu">
+          <nav class="menu menu--header">
             <ul class="menu__list">
               <li class="menu__item">
                 <a class="menu__link" href="#">О нас</a>
@@ -79,8 +79,11 @@
             <a class="header__num header__num--small" href="tel:+79785000623">+7978 500 06 23</a>
           </nav>
           <div class="header__right">
-            <a class="header__num header__num--main" href="tel:+79785000623">+7978 500 06 23</a>
-            <button class="header__btn btn" type="button">Кликните, чтобы начать!</button>
+            <a class="header__num header__num--main anim-line" href="tel:+79785000623">+7978 500 06 23</a>
+            <button class="header__btn btn btn-anim-color" type="button">Кликните, чтобы начать!</button>
+            <button class="header__burger">
+              <span class="header__burger-icon"></span>
+            </button>
           </div>
         </div>
       </div>
@@ -91,11 +94,11 @@
       <section class="decision-top">
         <div class="container">
           <div class="decision-top__inner">
-            <div class="decision-top__left">
-              <span class="decision-top__text title-two">
+            <div class="decision-top__left" data-scroll data-scroll-speed="1">
+              <span class="decision-top__text title-two" data-scroll data-scroll-speed="1">
                 Выбери для себя
               </span>
-              <h1 class="decision-top__title title">
+              <h1 class="decision-top__title title" data-scroll data-scroll-speed="0.5">
                 КРЕАТИВНОЕ РЕШЕНИЕ
               </h1>
               <div class="decision-top__bottom-text">
@@ -104,7 +107,7 @@
                 </p>
               </div>
               <div class="decision-top__btn-box">
-                <button class="decision-top__btn decision-top__btn--first btn" type="button">
+                <button class="decision-top__btn decision-top__btn--first btn btn-anim-color" type="button">
                   Выбрать услугу
                 </button>
                 <button class="decision-top__btn decision-top__btn--second btn" type="button">
@@ -112,7 +115,7 @@
                 </button>
               </div>
             </div>
-            <div class="decision-top__right">
+            <div class="decision-top__right" data-scroll data-scroll-speed="4">
               <img class="decision-top__img" src="img/decision.png" alt="">
             </div>
           </div>
@@ -121,11 +124,11 @@
 
       <section class="tasks">
         <div class="container">
-          <h2 class="tasks__title title">
+          <h2 class="tasks__title title" data-scroll data-scroll-speed="1">
             Мы решаем задачи
           </h2>
           <ul class="tasks__items">
-            <li class="tasks__item">
+            <li class="tasks__item" data-scroll data-scroll-speed="1">
               <h3 class="tasks__item-title">
                 Быстро
               </h3>
@@ -135,7 +138,7 @@
                 </p>
               </div>
             </li>
-            <li class="tasks__item">
+            <li class="tasks__item" data-scroll data-scroll-speed="-1">
               <h3 class="tasks__item-title">
                 Качественно
               </h3>
@@ -145,7 +148,7 @@
                 </p>
               </div>
             </li>
-            <li class="tasks__item">
+            <li class="tasks__item" data-scroll data-scroll-speed="1">
               <h3 class="tasks__item-title">
                 Креативно
               </h3>
@@ -193,134 +196,146 @@
                 Цифровые решения и услуги
               </h2>
               <ul class="services__items">
-                <li class="services__item">
-                  <div class="services__box">
-                    <img class="services__img" src="img/services-1.png" alt="">
-                  </div>
-                  <h3 class="services__item-title">
-                    Веб-разработка и дизайн
-                  </h3>
-                  <span class="services__price">
-                    От 15 000 рублей
-                  </span>
-                  <a class="services__btn" href="#">
-                    Узнать детали
-                  </a>
+                <li class="services__left" data-scroll data-scroll-speed="2">
+                  <ul class="services__left-items">
+                    <li class="services__item">
+                      <div class="services__box">
+                        <img class="services__img" src="img/services-1.png" alt="">
+                      </div>
+                      <h3 class="services__item-title">
+                        Веб-разработка и дизайн
+                      </h3>
+                      <span class="services__price">
+                        От 15 000 рублей
+                      </span>
+                      <a class="services__btn" href="#">
+                        Узнать детали
+                      </a>
+                    </li>
+                    <li class="services__item">
+                      <div class="services__box">
+                        <img class="services__img" src="img/services-2.png" alt="">
+                      </div>
+                      <h3 class="services__item-title">
+                        Создание и оптимизация веб-сайтов
+                      </h3>
+                      <span class="services__price">
+                        От 20000 рублей
+                      </span>
+                      <a class="services__btn" href="#">
+                        Узнать детали
+                      </a>
+                    </li>
+                    <li class="services__item">
+                      <div class="services__box">
+                        <img class="services__img" src="img/services-3.png" alt="">
+                      </div>
+                      <h3 class="services__item-title">
+                        Разработка интернет-магазинов
+                      </h3>
+                      <span class="services__price">
+                        От 25000 рублей
+                      </span>
+                      <a class="services__btn" href="#">
+                        Узнать детали
+                      </a>
+                    </li>
+                  </ul>
                 </li>
-                <li class="services__item">
-                  <div class="services__box">
-                    <img class="services__img" src="img/services-2.png" alt="">
-                  </div>
-                  <h3 class="services__item-title">
-                    Создание и оптимизация веб-сайтов
-                  </h3>
-                  <span class="services__price">
-                    От 20000 рублей
-                  </span>
-                  <a class="services__btn" href="#">
-                    Узнать детали
-                  </a>
+                <li class="services__center" data-scroll data-scroll-speed="3">
+                  <ul class="services__center-items">
+                    <li class="services__item">
+                      <div class="services__box">
+                        <img class="services__img" src="img/services-4.png" alt="">
+                      </div>
+                      <h3 class="services__item-title">
+                        Разработка мобильных приложений
+                      </h3>
+                      <span class="services__price">
+                        От 10 000 рублей
+                      </span>
+                      <a class="services__btn" href="#">
+                        Узнать детали
+                      </a>
+                    </li>
+                    <li class="services__item">
+                      <div class="services__box">
+                        <img class="services__img" src="img/services-5.png" alt="">
+                      </div>
+                      <h3 class="services__item-title">
+                        UI/UX-дизайн
+                      </h3>
+                      <span class="services__price">
+                        От 20000 рублей
+                      </span>
+                      <a class="services__btn" href="#">
+                        Узнать детали
+                      </a>
+                    </li>
+                    <li class="services__item">
+                      <div class="services__box">
+                        <img class="services__img" src="img/services-6.png" alt="">
+                      </div>
+                      <h3 class="services__item-title">
+                        Веб-хостинг и поддержка
+                      </h3>
+                      <span class="services__price">
+                        8000 рублей
+                      </span>
+                      <a class="services__btn" href="#">
+                        Узнать детали
+                      </a>
+                    </li>
+                  </ul>
                 </li>
-                <li class="services__item">
-                  <div class="services__box">
-                    <img class="services__img" src="img/services-3.png" alt="">
-                  </div>
-                  <h3 class="services__item-title">
-                    Разработка интернет-магазинов
-                  </h3>
-                  <span class="services__price">
-                    От 25000 рублей
-                  </span>
-                  <a class="services__btn" href="#">
-                    Узнать детали
-                  </a>
-                </li>
-                <li class="services__item">
-                  <div class="services__box">
-                    <img class="services__img" src="img/services-4.png" alt="">
-                  </div>
-                  <h3 class="services__item-title">
-                    Разработка мобильных приложений
-                  </h3>
-                  <span class="services__price">
-                    От 10 000 рублей
-                  </span>
-                  <a class="services__btn" href="#">
-                    Узнать детали
-                  </a>
-                </li>
-                <li class="services__item">
-                  <div class="services__box">
-                    <img class="services__img" src="img/services-5.png" alt="">
-                  </div>
-                  <h3 class="services__item-title">
-                    UI/UX-дизайн
-                  </h3>
-                  <span class="services__price">
-                    От 20000 рублей
-                  </span>
-                  <a class="services__btn" href="#">
-                    Узнать детали
-                  </a>
-                </li>
-                <li class="services__item">
-                  <div class="services__box">
-                    <img class="services__img" src="img/services-6.png" alt="">
-                  </div>
-                  <h3 class="services__item-title">
-                    Веб-хостинг и поддержка
-                  </h3>
-                  <span class="services__price">
-                    8000 рублей
-                  </span>
-                  <a class="services__btn" href="#">
-                    Узнать детали
-                  </a>
-                </li>
-                <li class="services__item">
-                  <div class="services__box">
-                    <img class="services__img" src="img/services-7.png" alt="">
-                  </div>
-                  <h3 class="services__item-title">
-                    Разработка мобильных приложений
-                    UI/UX-дизайн
-                    Веб-хостинг и поддержка
-                  </h3>
-                  <span class="services__price">
-                    38000 рублей
-                  </span>
-                  <a class="services__btn" href="#">
-                    Узнать детали
-                  </a>
-                </li>
-                <li class="services__item">
-                  <div class="services__box">
-                    <img class="services__img" src="img/services-8.png" alt="">
-                  </div>
-                  <h3 class="services__item-title">
-                    Обучение веб-разработке и программированию
-                  </h3>
-                  <span class="services__price">
-                    В разработке
-                  </span>
-                  <a class="services__btn" href="#">
-                    Узнать детали
-                  </a>
-                </li>
-                <li class="services__item">
-                  <div class="services__box">
-                    <img class="services__img" src="img/services-9.png" alt="">
-                  </div>
-                  <h3 class="services__item-title">
-                    Создание фирменного стиля
-                    и копирайтинг 
-                  </h3>
-                  <span class="services__price">
-                    20000 рублей
-                  </span>
-                  <a class="services__btn" href="#">
-                    Узнать детали
-                  </a>
+                <li class="services__right" data-scroll data-scroll-speed="1">
+                  <ul class="services__right-items">
+                    <li class="services__item">
+                      <div class="services__box">
+                        <img class="services__img" src="img/services-7.png" alt="">
+                      </div>
+                      <h3 class="services__item-title">
+                        Разработка мобильных приложений
+                        UI/UX-дизайн
+                        Веб-хостинг и поддержка
+                      </h3>
+                      <span class="services__price">
+                        38000 рублей
+                      </span>
+                      <a class="services__btn" href="#">
+                        Узнать детали
+                      </a>
+                    </li>
+                    <li class="services__item">
+                      <div class="services__box">
+                        <img class="services__img" src="img/services-8.png" alt="">
+                      </div>
+                      <h3 class="services__item-title">
+                        Обучение веб-разработке и программированию
+                      </h3>
+                      <span class="services__price">
+                        В разработке
+                      </span>
+                      <a class="services__btn" href="#">
+                        Узнать детали
+                      </a>
+                    </li>
+                    <li class="services__item">
+                      <div class="services__box">
+                        <img class="services__img" src="img/services-9.png" alt="">
+                      </div>
+                      <h3 class="services__item-title">
+                        Создание фирменного стиля
+                        и копирайтинг 
+                      </h3>
+                      <span class="services__price">
+                        20000 рублей
+                      </span>
+                      <a class="services__btn" href="#">
+                        Узнать детали
+                      </a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
               <div class="services__bottom-box">
@@ -336,7 +351,7 @@
       <section class="training" di="pp">
         <div class="container">
           <div class="training__inner">
-            <div class="training__left">
+            <div class="training__left" data-scroll data-scroll-speed="1">
               <img class="training__img" src="img/training.png" alt="">
             </div>
             <div class="training__right">
@@ -350,7 +365,7 @@
                   навыки, применимые в реальном мире.
                 </p>
               </div>
-              <button class="training__btn btn" type="button">
+              <button class="training__btn btn btn-anim-color" type="button">
                 Узнать больше
               </button>
             </div>
@@ -373,7 +388,7 @@
                   <input class="form__input" type="tel" placeholder="Номер телефона">
                 </label>
                 <div class="form__box">
-                  <button class="form__btn btn" type="submit">
+                  <button class="form__btn btn btn-anim-color" type="submit">
                     Отправить
                   </button>
                   <span class="form__text">
@@ -382,21 +397,39 @@
                 </div>
               </form>
             </div>
-            <div class="bottom-form__right">
+            <div class="bottom-form__right" data-scroll data-scroll-speed="1">
               <img class="bottom-form__img" src="img/bottom-form.png" alt="">
             </div>
           </div>
         </div>
       </section>
 
+      <div class="arrow-up">
+        <div class="container">
+          <a class="arrow-up__content">
+            <span class="arrow-up__circle">
+              <svg width="92" height="90" viewBox="0 0 92 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M31.6635 87.2218C8.83043 79.181 -3.18799 54.2303 4.81931 31.4923C12.8265 8.75457 37.8272 -3.15984 60.6602 4.88094C83.4931 12.9216 95.5116 37.8726 87.5044 60.6104C82.9498 73.5438 72.8973 82.975 60.8729 87.2245" stroke="white" stroke-width="4" stroke-linecap="round"/>
+              </svg>                           
+            </span>
+            <span class="arrow-up__arrow">
+              <svg width="41" height="67" viewBox="0 0 41 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.5 64.2485C18.5 65.7673 19.3955 66.9985 20.5 66.9985C21.6045 66.9985 22.5 65.7673 22.5 64.2485L22.5 3.74855C22.5 2.22979 21.6045 0.998535 20.5 0.998535C19.3955 0.998535 18.5 2.22978 18.5 3.74855L18.5 64.2485Z" fill="white"/>
+                <path d="M36.3292 22.7263C37.2834 23.6804 38.8303 23.6804 39.7844 22.7263C40.7385 21.7721 40.7385 20.2252 39.7844 19.2711L22.2276 1.71434C21.2733 0.760137 19.7264 0.759957 18.7722 1.71416L18.7581 1.72859L1.21558 19.2711C0.261471 20.2253 0.261471 21.7722 1.21558 22.7263C2.1697 23.6804 3.71664 23.6804 4.67075 22.7263L20.5 6.89709L36.3292 22.7263Z" fill="white"/>
+              </svg>              
+            </span>
+          </a>
+        </div>
+      </div>
+
     </main>
 
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
-          <div class="footer__box">
-            <img class="footer__img" src="img/icons/logo-two.png" alt="">
-          </div>
+          <a class="footer__box" href="#">
+            <img class="footer__img" src="img/icons/logo-two.svg" alt="">
+          </a>
           <nav class="menu menu--footer">
             <ul class="menu__list">
               <li class="menu__item">
@@ -431,9 +464,11 @@
               </li>
             </ul>
           </nav>
-          <a class="footer__phone" href="tel:+79785000623">
-            +7 978 500 06 23
-          </a>
+          <div class="footer__num-box">
+            <a class="footer__phone anim-line" href="tel:+79785000623">
+              +7 978 500 06 23
+            </a>
+          </div>
         </div>
       </div>
     </footer>

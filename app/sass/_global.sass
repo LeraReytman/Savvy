@@ -111,3 +111,53 @@ button
     &::before
       width: 100%
       transition: width .3s
+
+.arrow-up
+  text-align: end
+  margin-right: 30px
+  margin-bottom: 120px
+
+  @include _767
+    margin-right: 0
+    margin-bottom: 40px
+    text-align: center
+
+  &__content
+    display: block
+    display: inline-block
+    position: relative
+
+    &:hover
+      .arrow-up__circle
+        svg
+          transform: scale(1.1)
+          transition: transform .3s
+
+      .arrow-up__arrow
+        transform: translate(-50%, -6px)
+        transition: transform .3s
+
+  &__circle
+    svg
+      transition: transform .3s
+
+    @include _767
+      svg
+        max-width: 62px
+        max-height: 62px
+        transition: transform .3s
+
+  &__arrow
+    position: absolute
+    left: 50%
+    bottom: 0
+    transform: translate(-50%, 12px)
+    transition: transform .3s
+
+    svg
+      @include _767
+        max-width: 28px
+        max-height: 46px
+
+  svg
+    cursor: pointer

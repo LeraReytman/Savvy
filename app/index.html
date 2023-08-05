@@ -53,7 +53,7 @@
 
 <body>
 
-  <div class="main-wrapper" data-scroll-container>
+  <div class="main-wrapper" id="top-scroll" data-scroll-container>
     <header class="header">
       <div class="container">
         <div class="header__inner">
@@ -173,11 +173,14 @@
         </div>
       </section>
 
-      <section class="team" data-scroll data-scroll-id="hey">
+      <section class="team">
+        <span class="team__bg">
+          <img class="team__bg-img" src="img/team-bg.png" alt="">
+        </span>
         <div class="container">
           <div class="team__wrapper">
             <div class="team__inner">
-              <h2 class="team__title title-two" data-scroll>
+              <h2 class="team__title title-two">
                 <span data-scroll data-scroll-delay="0.15" data-scroll-speed="2">Н</span>
                 <span data-scroll data-scroll-delay="0.14" data-scroll-speed="2">а</span>
                 <span data-scroll data-scroll-delay="0.13" data-scroll-speed="2">ш</span>
@@ -394,6 +397,24 @@
           </div>
         </div>
       </section>
+
+      <div class="arrow-up">
+        <div class="container">
+          <a class="arrow-up__content">
+            <span class="arrow-up__circle">
+              <svg width="92" height="90" viewBox="0 0 92 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M31.6635 87.2218C8.83043 79.181 -3.18799 54.2303 4.81931 31.4923C12.8265 8.75457 37.8272 -3.15984 60.6602 4.88094C83.4931 12.9216 95.5116 37.8726 87.5044 60.6104C82.9498 73.5438 72.8973 82.975 60.8729 87.2245" stroke="white" stroke-width="4" stroke-linecap="round"/>
+              </svg>                           
+            </span>
+            <span class="arrow-up__arrow">
+              <svg width="41" height="67" viewBox="0 0 41 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.5 64.2485C18.5 65.7673 19.3955 66.9985 20.5 66.9985C21.6045 66.9985 22.5 65.7673 22.5 64.2485L22.5 3.74855C22.5 2.22979 21.6045 0.998535 20.5 0.998535C19.3955 0.998535 18.5 2.22978 18.5 3.74855L18.5 64.2485Z" fill="white"/>
+                <path d="M36.3292 22.7263C37.2834 23.6804 38.8303 23.6804 39.7844 22.7263C40.7385 21.7721 40.7385 20.2252 39.7844 19.2711L22.2276 1.71434C21.2733 0.760137 19.7264 0.759957 18.7722 1.71416L18.7581 1.72859L1.21558 19.2711C0.261471 20.2253 0.261471 21.7722 1.21558 22.7263C2.1697 23.6804 3.71664 23.6804 4.67075 22.7263L20.5 6.89709L36.3292 22.7263Z" fill="white"/>
+              </svg>              
+            </span>
+          </a>
+        </div>
+      </div>
       
     </main>
 

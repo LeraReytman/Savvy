@@ -8,58 +8,66 @@ $(function(){
       smooth: true,
 
     });
-  
-    scroll.on('scroll', (args) => {
 
-      if ($('.decision-wrapper').length) {
+    const target = document.querySelector('#top-scroll');
 
-        let servicesOne = $('.services__bg-one--one').offset().top + 200;
-        let servicesTwo = $('.services__bg-one--two').offset().top + 200;
-        let servicesThree = $('.services__bg-one--three').offset().top + 200;
+    $('.arrow-up').on('click', function() {
+
+      scroll.scrollTo(target);
+
+    })
+
+    if ($('.decision-wrapper').length) {
+      
+      let servicesOne = $('.services__bg-one--one').offset().top;
+      let servicesTwo = $('.services__bg-one--two').offset().top;
+      let servicesThree = $('.services__bg-one--three').offset().top;
+
+      scroll.on('scroll', (args) => {
 
         let wScroll = $('.decision-wrapper').offset().top;
         wScroll = Math.abs(wScroll);
         const height = $(window).height();
 
-        console.log(wScroll)
-
-        console.log(servicesTwo + height)
-
         const servicesOnePos = (wScroll + height - servicesOne);
         const servicesTwoPos = (wScroll + height - servicesTwo);
         const servicesThreePos = (wScroll + height - servicesThree);
 
-        if (wScroll >= servicesOne) {
+        if (wScroll + height >= servicesOne) {
 
           $('.services__bg-one--one').css({
 
-            'transform' : 'rotate(' + (servicesOnePos) * 0.2 + 'deg)'
+            'transform' : 'rotate(' + (servicesOnePos) * 0.4 + 'deg)'
 
           });
 
         }
 
-        if (wScroll >= servicesTwo) {
+        if (wScroll + height >= servicesTwo) {
 
           $('.services__bg-one--two').css({
 
-            'transform' : 'rotate(' + (servicesTwoPos) * 0.2 + 'deg)'
+            'transform' : 'rotate(' + (servicesTwoPos) * 0.4 + 'deg)'
 
           });
 
         }
 
-        if (wScroll >= servicesThree) {
+        if (wScroll + height >= servicesThree) {
 
           $('.services__bg-one--three').css({
 
-            'transform' : 'rotate(' + (servicesThreePos) * 0.2 + 'deg)'
+            'transform' : 'rotate(' + (servicesThreePos) * 0.4 + 'deg)'
 
           });
 
         }
 
-      }
+      });
+
+    }
+    
+    scroll.on('scroll', (args) => {
 
       if(typeof args.currentElements['num-one'] === 'object') {
   
@@ -88,44 +96,55 @@ $(function(){
     $('.menu--header').toggleClass('menu--active')
     $(this).toggleClass('header__burger--active')
     $('body').toggleClass('body-hidden')
-    scroll.stop()
-    
 
   })
-
-  let swiper = new Swiper(".swiper-one", {
-
-    slidesPerView: 2,
-
-    spaceBetween: 32,
-
-    speed: 1000,
-
-    centeredSlides: true,
-
-    autoplay: {
-
-      delay: 2000,
-
-    }, 
-
-    breakpoints: {
-
-      767: {
-
-        spaceBetween: 60,
-
-      },
-
-
-      1200: {
-
-        spaceBetween: 114,
-
-      },
-
-    }
-
-  });
   
+});
+
+let swiper = new Swiper(".swiper-one", {
+
+  spaceBetween: 32,
+
+  slidesPerView: 1,
+
+  centeredSlides: false,
+
+  speed: 1000,
+
+  autoplay: {
+
+    delay: 2000,
+    disableOnInteraction: false,
+
+  }, 
+
+  freeMode: true,
+
+  breakpoints: {
+
+    767: {
+
+      spaceBetween: 60,
+
+      slidesPerView: 2,
+
+      centeredSlides: true,
+      
+
+    },
+
+    1200: {
+
+      spaceBetween: 114,
+
+      spaceBetween: 60,
+
+      slidesPerView: 2,
+
+      centeredSlides: true,
+
+    },
+
+  }
+
 });

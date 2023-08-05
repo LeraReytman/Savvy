@@ -10,9 +10,13 @@
 
 .main-wrapper
   background-image: linear-gradient(121deg, #438BDF 0%, rgba(83, 217, 226, 0.92) 100%)
+  position: relative
+  overflow: hidden
 
 .decision-wrapper
   background-image: linear-gradient(131deg, #60DBE3 0%, #3F82D0 80.39%)
+  position: relative
+  overflow: hidden
 
 .header
   padding: 26px 0
@@ -256,7 +260,6 @@
 
 .top
   padding: 100px 0 20px
-  min-height: calc(100vh - 123px)
 
   @include _767
     padding: 42px 0 120px
@@ -543,6 +546,22 @@
       transition: box-shadow .3s
 
 .team
+  position: relative
+
+  &__bg
+    position: absolute
+    top: 5%
+    max-width: 1920px
+    width: 100%
+    left: 50%
+    transform: translateX(-50%)
+
+    @include _991
+      display: none
+
+  &__bg-img
+    width: 100%
+
   &__wrapper
     position: relative
 
@@ -870,15 +889,28 @@
     @include _991
       margin-left: 80px
 
+    @include _767
+      margin-left: 15vw
+
   &__slider
     overflow: visible
 
+    @include _767
+      padding-right: 35vw
+      padding-left: 20px
+
+    @include _575
+      padding-right: 20vw
+
   &__project
     display: flex
-    margin-left: -200px
+    margin-left: -222px !important
 
     @include _991
-      margin-left: -80px
+      margin-left: -80px !important
+
+    @include _767
+      margin-left: 0 !important
 
   &__item-link
     display: flex
@@ -944,10 +976,10 @@
       border-radius: 2.5vw
 
 .contacts
-  padding: 150px 0 300px 0
+  padding: 150px 0 107px 0
 
   @include _767
-    padding: 60px 0 150px 0
+    padding: 60px 0 50px 0
 
   &__inner
     display: flex
@@ -1058,18 +1090,55 @@
   padding-bottom: 80px
   margin-top: -130px
 
+  @include _1400
+    margin-top: -40px
+  
+  @include _1200
+    margin-top: 80px
+
+  @include _991
+    margin-top: 0
+    padding-top: 40px
+
+  @include _767
+    padding-bottom: 60px
+
   &__inner
     display: flex
     justify-content: space-between
     align-items: center
+    
+    @include _1200
+      display: block
 
   &__left
     max-width: 790px
     width: 100%
 
+    @include _1200
+      max-width: 100%
+      margin: 0 auto
+
+  &__title
+    @include _767
+      margin-bottom: 6px
+
   &__text
+    display: block
     font-weight: 200
-    line-height: 66px
+    line-height: 44px
+    margin-bottom: 0
+
+    @include _1400
+      font-size: 28px
+      line-height: 0
+
+    @include _1200
+      line-height: 20px
+
+    @include _991
+      line-height: 40px
+      margin-bottom: 12px
 
   &__bottom-text
     font-size: 24px
@@ -1077,44 +1146,105 @@
     line-height: 33px
     margin-bottom: 48px
 
+    @include _1400
+      font-size: 20px
+
+    @include _767
+      font-size: 18px
+      margin-bottom: 36px
+      line-height: 28px
+
+  &__btn-box
+    display: flex
+
+    @include _575
+      display: block
+
   &__btn
     max-width: 240px
     padding: 19px 5px
 
+    @include _1200
+      padding: 16px 5px
+      max-width: 200px
+
     &--first
       margin-right: 33px
 
+      @include _575
+        display: block
+        margin-right: 0
+        margin-bottom: 22px
+
     &--second
       background-color: rgba(4, 161, 171, 0.92)
+      border: 2px solid rgba(4, 161, 171, 0.92)
       box-shadow: 0px 4px 30px 0px rgba(0, 70, 74, 0.30)
       color: #ffffff
+      transition: box-shadow .3s, background-color .3s
+
+      &:hover
+        background-color: transparent
+        box-shadow: 0px 0px 0px 0px rgba(0, 70, 74, 0.30)
+        transition: box-shadow .3s, background-color .3s
 
   &__right
     max-width: 800px
     pointer-events: none
 
+    @include _1400
+      max-width: 700px
+
+    @include _1200
+      margin: -100px auto 0 auto
+
+    @include _991
+      display: none
+
+  &__img
+    @include _1400
+      max-width: 700px
+
 .tasks
-  padding: 80px 9px 200px
+  padding: 80px 0 200px
+
+  @include _767
+    padding: 60px 0 80px
 
   &__title
     text-align: center
     margin-bottom: 100px
+
+    @include _575
+      margin-bottom: 62px
     
   &__items
     display: flex
     justify-content: space-between
+
+    @include _991
+      display: block
 
   &__item
     max-width: 432px
     padding-top: 168px
     position: relative
 
+    @include _1200
+      padding-top: 120px
+
+    @include _991
+      margin: 0 auto
+
+    @include _575
+      padding-top: 90px
+
     &::before
       content: ''
       position: absolute
       max-width: 150px
       width: 100%
-      max-height: 150%
+      max-height: 150px
       height: 100%
       background-repeat: no-repeat
       background-size: contain
@@ -1122,12 +1252,23 @@
       left: 50%
       transform: translateX(-50%)
 
+      @include _1200
+        max-width: 100px
+        max-height: 100px
+
+      @include _575
+        max-width: 80px
+        max-height: 80px
+
     &:first-child
       &::before
         background-image: url('../img/icons/tasks-1.png')
 
     &:nth-child(2)
       margin: 0 30px  
+
+      @include _991
+        margin: 32px auto 32px auto
 
       &::before
         background-image: url('../img/icons/tasks-2.png')
@@ -1143,15 +1284,36 @@
     margin-bottom: 18px
     text-align: center
 
+    @include _1200
+      font-size: 32px
+      line-height: 100%
+      margin-bottom: 8px
+
+    @include _575
+      font-size: 26px
+
   &__item-text
     font-size: 24px
     font-weight: 200
     text-align: center
     line-height: normal
 
+    @include _1200
+      font-size: 20px
+      line-height: 140%
+
+    @include _575
+      font-size: 18px
+
 .services
-  padding: 200px 0 125px
+  padding: 200px 110px 125px
   overflow: hidden
+
+  @include _1600
+    padding: 200px 0 125px
+
+  @include _767
+    padding: 80px 0 113px
 
   &__wrapper
     position: relative
@@ -1165,6 +1327,9 @@
     height: 100%
     bottom: 5%
     left: -8%
+
+    @include _1600
+      display: none
 
   &__bg-smallBox
     position: absolute
@@ -1187,6 +1352,17 @@
     position: relative
     z-index: 3
 
+    @include _1400
+      padding: 150px 70px 83px 70px
+
+    @include _991
+      padding: 80px 70px 83px 70px
+      border-radius: 80px
+
+    @include _575
+      border-radius: 60px
+      padding: 80px 32px 83px 32px
+
   &__bg-one,
   &__bg-two,
     display: block
@@ -1195,6 +1371,9 @@
     width: 100%
     max-height: 238px
     height: 100%
+
+    @include _1600
+      display: none
 
   &__bg-one
     top: 51px
@@ -1213,12 +1392,23 @@
     text-align: center
     margin-bottom: 120px
 
+    @include _991
+      margin-bottom: 60px
+
   &__items
-    display: grid
-    grid-template-columns: repeat(3, minmax(min-content, max-content))
+    display: flex
     justify-content: space-between
     margin-bottom: 130px
-    gap: 87px 60px
+    gap: 0 60px
+
+    @include _991
+      display: block
+      margin-bottom: 80px
+
+  &__left,
+  &__center
+    @include _991
+      margin-bottom: 32px
 
   &__item
     border-radius: 50px
@@ -1230,8 +1420,31 @@
     text-align: center
     color: #000000
 
+    @include _1200
+      padding: 70px 12px 31px 12px
+
+    @include _991
+      max-width: 100%
+
+    @include _575
+      border-radius: 40px
+      padding: 42px 12px 26px 12px
+
+    &:not(:last-child)
+      margin-bottom: 87px
+
+      @include _991
+        margin-bottom: 32px
+
   &__box
     margin-bottom: 26px
+
+  &__img
+    @include _1200
+      max-width: 80px
+
+      @include _575
+        max-width: 63px
 
   &__item-title
     font-size: 24px
@@ -1240,10 +1453,30 @@
     margin-bottom: 30px
     min-height: 160px
 
+    @include _1400
+      font-size: 20px
+      line-height: 150%
+      min-height: 100px
+
+    @include _575
+      font-size: 18px
+      min-height: auto
+
   &__price
     display: block
     font-size: 24px
     margin-bottom: 64px
+
+    @include _1200
+      font-size: 20px
+      margin-bottom: 32px
+
+    @include _767
+      font-size: 18px
+
+    @include _575
+      font-size: 16px
+      margin-bottom: 16px
 
   &__btn
     display: inline-block
@@ -1253,6 +1486,12 @@
     font-weight: 300
     color: #000
     position: relative
+
+    @include _1200
+      font-size: 18px
+
+    @include _575
+      font-size: 16px
 
     &:hover
       &::before
@@ -1275,40 +1514,84 @@
 
   &__bottom-btn
     max-width: 276px
-    font-size: 36px
+    font-size: 28px
     line-height: normal
     border-radius: 20px
     background-image: linear-gradient(139deg, rgba(83, 217, 226, 0.92) 0%, #3F82D0 100%)
-    box-shadow: 0px 4px 50px 0px #0F58AE
+    box-shadow: 0px 4px 30px 0px #0F58AE
     color: #fff
-    padding: 0 5px
+    padding: 5px 5px
+    transition: box-shadow .3s
+
+    @include _767
+      max-width: 200px
+      border-radius: 12px
+      font-size: 20px
+
+    @include _575
+      font-size: 18px
+
+    &:hover
+      box-shadow: 8px 8px 0px 0px #0F58AE
+      transition: box-shadow .3s
 
 .training
   padding: 125px 0 100px
+
+  @include _767
+    padding: 0 0 60px
 
   &__inner
     display: flex
     justify-content: space-between
     align-items: center
 
+    @include _1200
+      display: block
+
   &__left
     margin-right: 60px
     max-width: 691px
     position: relative
+
+    @include _1200
+      margin: 0 auto
 
   &__img
     position: relative
     left: 50%
     transform: translateX(-50%)
 
+    @include _1400
+      max-width: 700px
+
+    @include _1200
+      max-width: 600px
+
+    @include _575
+      width: 100%
+
   &__right
     max-width: 836px
     width: 100%
     text-align: end
 
+    @include _1200
+      max-width: 100%
+
   &__title
     line-height: normal
     margin-bottom: 34px
+
+    @include _1400
+      font-size: 38px
+      line-height: 130%
+
+    @include _991
+      font-size: 32px
+
+    @include _767
+      margin-bottom: 22px
 
   &__text
     font-size: 24px
@@ -1316,28 +1599,64 @@
     line-height: normal
     margin-bottom: 56px
 
+    @include _1400
+      font-size: 20px
+      line-height: 140%
+
+    @include _767
+      font-size: 18px
+      margin-bottom: 32px
+
+    @include _575
+      font-size: 16px
+
 .bottom-form
-  padding: 100px 0 234px
+  padding: 100px 0 100px
+
+  @include _767
+    padding: 60px 0
 
   &__inner
     display: flex
     justify-content: space-between
     align-items: center
 
+    @include _991
+      display: block
+
   &__left
     max-width: 850px
     width: 100%
 
+  &__img
+    @include _1400
+      max-width: 600px
+
+    @include _1200
+      max-width: 500px
+      width: 100%
+
   &__title
     margin-bottom: 100px
+    line-height: 120%
+
+    @include _767
+      margin-bottom: 32px
 
   &__right
     max-width: 700px
+
+    @include _991
+      max-width: 500px
+      margin: 0 auto
 
 .form
   &__label
     display: block 
     margin-bottom: 48px
+
+    @include _767
+      margin-bottom: 18px
 
   &__input
     max-width: 546px
@@ -1347,26 +1666,61 @@
     background-color: transparent
     border: 3px solid #FFF
     border-radius: 30px
-    font-size: 32px
+    font-size: 24px
     font-weight: 300
     color: #fff
     outline: none
 
+    @include _767
+      max-width: 100%
+      min-height: 50px
+      border-radius: 16px
+      font-size: 18px
+      padding: 0 16px
+
+    @include _575
+      font-size: 16px
+
     &::placeholder
-      font-size: 32px
+      font-size: 24px
       font-weight: 300
       color: #fff
 
+      @include _767
+        font-size: 18px
+
+      @include _575
+        font-size: 16px
+
   &__btn
-    font-size: 32px
+    font-size: 26px
     font-weight: 300
     padding: 16px 5px
     margin-right: 24px
+
+    @include _1400
+      margin-right: 0
+      margin-bottom: 22px
+
+    @include _767
+      font-size: 20px
+      padding: 10px 5px
+      margin-bottom: 16px
+
+    @include _575
+      font-size: 18px
+      padding: 8px 5px
 
   &__text
     font-size: 24px
     font-weight: 300
     line-height: normal
+
+    @include _1400
+      display: block
+
+    @include _767
+      font-size: 18px
 
 .footer
   padding: 103px 0 71px
