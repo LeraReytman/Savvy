@@ -2,6 +2,28 @@ $(function(){
 
   window.onload = (event) => {
 
+    let swiperTwo = new Swiper(".swiper-two", {
+    
+      direction: 'vertical',
+
+      slidesPerView: 1,
+
+      loop: true,
+    
+      speed: 1000,
+
+      allowTouchMove: false,
+
+      allowMouseEvents: false,
+    
+      autoplay: {
+    
+        delay: 2000,
+    
+      }, 
+    
+    });
+
     const scroll = new LocomotiveScroll({
 
       el: document.querySelector('[data-scroll-container]'),
@@ -98,53 +120,53 @@ $(function(){
     $('body').toggleClass('body-hidden')
 
   })
+
+  let swiper = new Swiper(".swiper-one", {
+
+    spaceBetween: 32,
   
-});
-
-let swiper = new Swiper(".swiper-one", {
-
-  spaceBetween: 32,
-
-  slidesPerView: 1,
-
-  centeredSlides: false,
-
-  speed: 1000,
-
-  autoplay: {
-
-    delay: 2000,
-    disableOnInteraction: false,
-
-  }, 
-
-  freeMode: true,
-
-  breakpoints: {
-
-    767: {
-
-      spaceBetween: 60,
-
-      slidesPerView: 2,
-
-      centeredSlides: true,
-      
-
-    },
-
-    1200: {
-
-      spaceBetween: 114,
-
-      spaceBetween: 60,
-
-      slidesPerView: 2,
-
-      centeredSlides: true,
-
-    },
-
-  }
-
+    slidesPerView: 1,
+  
+    centeredSlides: false,
+  
+    speed: 1000,
+  
+    autoplay: {
+  
+      delay: 2000,
+      disableOnInteraction: false,
+  
+    }, 
+  
+    freeMode: true,
+  
+    breakpoints: {
+  
+      767: {
+  
+        spaceBetween: 60,
+  
+        slidesPerView: 2,
+  
+        centeredSlides: true,
+        
+  
+      },
+  
+      1200: {
+  
+        spaceBetween: 114,
+  
+        spaceBetween: 60,
+  
+        slidesPerView: 2,
+  
+        centeredSlides: true,
+  
+      },
+  
+    }
+  
+  });
+  
 });

@@ -52,7 +52,7 @@
 </head>
 <body>
 
-  <div class="study-wrapper" data-scroll-container>
+  <div class="study-wrapper" id="top-scroll" data-scroll-container>
 
     <header class="header">
       <div class="container">
@@ -91,9 +91,15 @@
     <main>
       <section class="edu">
         <div class="container">
-          <h1 class="edu__title title">
-            Обучение веб-разработке и программированию вместе с Savvy
-          </h1>
+          <div class="edu__flip">
+            <div class="edu__box swiper swiper-two">
+              <h1 class="edu__title title swiper-wrapper">
+                <span class="edu__title-text edu__title-text--one swiper-slide"> Обучение веб-разработке и программированию вместе с Savvy</span>
+                <span class="edu__title-text edu__title-text--two swiper-slide"> Обучение веб-разработке и программированию вместе с Savvy</span>
+                <span class="edu__title-text edu__title-text--three swiper-slide"> Обучение веб-разработке и программированию вместе с Savvy</span>
+              </h1>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -203,6 +209,10 @@
       </section>
 
       <section class="reviews">
+        <div class="reviews__arrows">
+          <img class="reviews__arrow-1" src="img/icons/arrow-left.png">
+          <img class="reviews__arrow-2" src="img/icons/arrow-right.png">
+        </div>
         <div class="container">
           <div class="reviews__inner">
             <h2 class="reviews__title">
@@ -232,8 +242,111 @@
         </div>
       </section>
 
+      <section class="bottom-form">
+        <div class="container">
+          <div class="bottom-form__inner">
+            <div class="bottom-form__left">
+              <h2 class="bottom-form__title title-two">
+                ДАВАЙТЕ СДЕЛАЕМ ЭТО ВМЕСТЕ!
+              </h2>
+              <form class="form">
+                <label class="form__label form__label--first">
+                  <input class="form__input" type="text" placeholder="Имя">
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="tel" placeholder="Номер телефона">
+                </label>
+                <div class="form__box">
+                  <button class="form__btn btn btn-anim-color" type="submit">
+                    Отправить
+                  </button>
+                  <span class="form__text">
+                    Мы свяжемся с Вами в ближайшее время
+                  </span>
+                </div>
+              </form>
+            </div>
+            <div class="bottom-form__right" data-scroll data-scroll-speed="1">
+              <img class="bottom-form__img" src="img/bottom-form.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="arrow-up">
+        <div class="container">
+          <a class="arrow-up__content">
+            <span class="arrow-up__circle">
+              <svg width="92" height="90" viewBox="0 0 92 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M31.6635 87.2218C8.83043 79.181 -3.18799 54.2303 4.81931 31.4923C12.8265 8.75457 37.8272 -3.15984 60.6602 4.88094C83.4931 12.9216 95.5116 37.8726 87.5044 60.6104C82.9498 73.5438 72.8973 82.975 60.8729 87.2245" stroke="white" stroke-width="4" stroke-linecap="round"/>
+              </svg>                           
+            </span>
+            <span class="arrow-up__arrow">
+              <svg width="41" height="67" viewBox="0 0 41 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.5 64.2485C18.5 65.7673 19.3955 66.9985 20.5 66.9985C21.6045 66.9985 22.5 65.7673 22.5 64.2485L22.5 3.74855C22.5 2.22979 21.6045 0.998535 20.5 0.998535C19.3955 0.998535 18.5 2.22978 18.5 3.74855L18.5 64.2485Z" fill="white"/>
+                <path d="M36.3292 22.7263C37.2834 23.6804 38.8303 23.6804 39.7844 22.7263C40.7385 21.7721 40.7385 20.2252 39.7844 19.2711L22.2276 1.71434C21.2733 0.760137 19.7264 0.759957 18.7722 1.71416L18.7581 1.72859L1.21558 19.2711C0.261471 20.2253 0.261471 21.7722 1.21558 22.7263C2.1697 23.6804 3.71664 23.6804 4.67075 22.7263L20.5 6.89709L36.3292 22.7263Z" fill="white"/>
+              </svg>              
+            </span>
+          </a>
+        </div>
+      </div>
+
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a class="footer__box" href="#">
+            <img class="footer__img" src="img/icons/logo-two.svg" alt="">
+          </a>
+          <nav class="menu menu--footer">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  О нас
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Креативные решения
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Наши проекты
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Обратная связь
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="study.html">
+                  Обучение программированию
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Отзывы студентов об обучении
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__num-box">
+            <a class="footer__phone anim-line" href="tel:+79785000623">
+              +7 978 500 06 23
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
   </div>
 
+  <script src="js/main.min.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
+
+</html>
