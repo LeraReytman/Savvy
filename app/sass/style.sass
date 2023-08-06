@@ -475,7 +475,7 @@
 
       .about__item-text
         &::before
-          background-image: url('../img/icons/about-2.png')
+          background-image: url('../img/icons/about-2.svg')
 
     &:nth-child(2)
       margin: 0 30px
@@ -485,12 +485,12 @@
 
       .about__item-text
         &::before
-          background-image: url('../img/icons/about-1.png')
+          background-image: url('../img/icons/about-1.svg')
 
     &:last-child
       .about__item-text
         &::before
-          background-image: url('../img/icons/about-3.png')
+          background-image: url('../img/icons/about-3.svg')
 
   &__item-content
     border-radius: 35px
@@ -1081,10 +1081,11 @@
       text-align: center
 
   &__img
-    max-width: 600px
+    @include _1400
+      max-width: 600px
 
-    @include _991
-      width: 100%
+      @include _991
+        width: 100%
 
 .decision-top
   padding-bottom: 80px
@@ -1262,7 +1263,7 @@
 
     &:first-child
       &::before
-        background-image: url('../img/icons/tasks-1.png')
+        background-image: url('../img/icons/tasks-1.svg')
 
     &:nth-child(2)
       margin: 0 30px  
@@ -1271,11 +1272,11 @@
         margin: 32px auto 32px auto
 
       &::before
-        background-image: url('../img/icons/tasks-2.png')
+        background-image: url('../img/icons/tasks-2.svg')
 
     &:last-child
       &::before
-        background-image: url('../img/icons/tasks-3.png')
+        background-image: url('../img/icons/tasks-3.svg')
 
   &__item-title
     font-size: 40px

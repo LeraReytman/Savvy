@@ -2063,7 +2063,7 @@ button {
 }
 
 .about__item:first-child .about__item-text::before {
-  background-image: url("../img/icons/about-2.png");
+  background-image: url("../img/icons/about-2.svg");
 }
 
 .about__item:nth-child(2) {
@@ -2077,11 +2077,11 @@ button {
 }
 
 .about__item:nth-child(2) .about__item-text::before {
-  background-image: url("../img/icons/about-1.png");
+  background-image: url("../img/icons/about-1.svg");
 }
 
 .about__item:last-child .about__item-text::before {
-  background-image: url("../img/icons/about-3.png");
+  background-image: url("../img/icons/about-3.svg");
 }
 
 .about__item-content {
@@ -2998,11 +2998,13 @@ button {
   }
 }
 
-.contacts__img {
-  max-width: 600px;
+@media (max-width: 1400px) {
+  .contacts__img {
+    max-width: 600px;
+  }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1400px) and (max-width: 991px) {
   .contacts__img {
     width: 100%;
   }
@@ -3300,7 +3302,7 @@ button {
 }
 
 .tasks__item:first-child::before {
-  background-image: url("../img/icons/tasks-1.png");
+  background-image: url("../img/icons/tasks-1.svg");
 }
 
 .tasks__item:nth-child(2) {
@@ -3314,11 +3316,11 @@ button {
 }
 
 .tasks__item:nth-child(2)::before {
-  background-image: url("../img/icons/tasks-2.png");
+  background-image: url("../img/icons/tasks-2.svg");
 }
 
 .tasks__item:last-child::before {
-  background-image: url("../img/icons/tasks-3.png");
+  background-image: url("../img/icons/tasks-3.svg");
 }
 
 .tasks__item-title {
