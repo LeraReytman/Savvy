@@ -4,6 +4,9 @@ body
   font-weight: 400
   color: #fff
 
+.body-hidden
+  overflow: hidden
+
 button
   font-family: 'Manrope'
 
@@ -23,6 +26,17 @@ button
   border-radius: 20px
   font-size: 20px
 
+  @include _1200
+    max-width: 180px
+    border-radius: 12px
+    padding: 10px 5px
+    font-size: 14px
+
+  @include _575
+    max-width: 153px
+    padding: 6px 5px
+    border-radius: 8px
+
   &--two
     background-color: transparent
     border: 1px solid #FFF
@@ -34,10 +48,116 @@ button
   text-transform: uppercase
   line-height: 87px
 
+  @include _1200
+    font-size: 48px
+    line-height: 124%
+
+  @include _991
+    font-size: 36px
+
 .title-two
   font-size: 48px
   font-weight: 600
   color: #ffffff
   margin-bottom: 28px
 
-    
+  @include _1200
+    font-size: 38px
+    margin-bottom: 18px
+
+  @include _575
+    font-size: 32px
+    margin-bottom: 16px
+
+.btn-anim-color
+  border: 1px solid transparent
+  transition: background-color .3s, border-color .3s, color .3s
+
+  &:hover
+    background-color: transparent
+    border-color: #fff
+    color: #fff
+    transition: background-color .3s, border-color .3s, color .3s
+
+.btn-anim-border
+  transition: background-color .3s, color .3s
+
+  svg
+    transition: fill .3s
+
+  &:hover
+    background-color: #fff
+    color: #000
+    transition: background-color .3s, color .3s
+
+    svg
+      fill: #000
+      transition: fill .3s
+
+.anim-line
+  position: relative
+
+  &::before
+    content: ''
+    position: absolute
+    width: 0
+    height: 2px
+    background-color: #fff
+    bottom: 0
+    left: 0
+    transition: width .3s
+
+  &:hover
+    &::before
+      width: 100%
+      transition: width .3s
+
+.arrow-up
+  text-align: end
+  margin-right: 30px
+  margin-bottom: 120px
+
+  @include _767
+    margin-right: 0
+    margin-bottom: 40px
+    text-align: center
+
+  &__content
+    display: block
+    display: inline-block
+    position: relative
+
+    &:hover
+      .arrow-up__circle
+        svg
+          transform: scale(1.1)
+          transition: transform .3s
+
+      .arrow-up__arrow
+        transform: translate(-50%, -6px)
+        transition: transform .3s
+
+  &__circle
+    svg
+      transition: transform .3s
+
+    @include _767
+      svg
+        max-width: 62px
+        max-height: 62px
+        transition: transform .3s
+
+  &__arrow
+    position: absolute
+    left: 50%
+    bottom: 0
+    transform: translate(-50%, 12px)
+    transition: transform .3s
+
+    svg
+      @include _767
+        max-width: 28px
+        max-height: 46px
+
+  svg
+    cursor: pointer
