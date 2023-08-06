@@ -2,6 +2,46 @@ $(function(){
 
   window.onload = (event) => {
 
+    let swiperThree = new Swiper(".swiper-three", {
+
+      slidesPerView: 1,
+
+      spaceBetween: 12,
+
+      loop: true,
+    
+      speed: 1000,
+
+      navigation: {
+
+        nextEl: '.reviews__arrow--prev',
+
+        prevEl: '.reviews__arrow--next',
+
+      },
+
+      breakpoints: {
+  
+        991: {
+    
+          slidesPerView: 2,
+          
+          spaceBetween: 36,
+
+        },
+
+        1300: {
+    
+          slidesPerView: 3,
+          
+          spaceBetween: 52,
+
+        },
+    
+      }
+    
+    });
+
     let swiperTwo = new Swiper(".swiper-two", {
     
       direction: 'vertical',

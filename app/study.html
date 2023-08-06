@@ -60,7 +60,7 @@
           <a class="logo" href="index.html">
             <img class="logo__img" src="img/icons/logo.svg" alt="">
           </a>
-          <nav class="menu">
+          <nav class="menu menu--header">
             <ul class="menu__list">
               <li class="menu__item">
                 <a class="menu__link" href="#">О нас</a>
@@ -106,14 +106,14 @@
       <section class="study-about">
         <div class="container">
           <div class="study-about__inner">
-            <h2 class="study-about__title">
+            <h2 class="study-about__title title-two">
               Веб-студия Savvy предлагает
             </h2>
             <p class="study-about__text">
               Уникальную и инновационную систему обучения программированию, которая помогает студентам овладеть навыками разработки веб-приложений и сайтов. Наш подход к обучению базируется на активном и практическом освоении материала, что позволяет студентам максимально эффективно усваивать знания и применять их на практике.
             </p>
-            <div class="study-about__box">
-              <img class="study-about__img" src="img/edu.png">
+            <div class="study-about__box" data-scroll data-scroll-speed="1">
+              <img class="study-about__img" src="img/edu.svg">
             </div>
           </div>
         </div>
@@ -152,7 +152,7 @@
                   4.Открытость к новым технологиям:
                 </h3>
                 <p class="steps__item-text">
-                  Мир веб-разработки постоянно меняется, и мы стараемся следовать последним тенденциям и новым технологиям.
+                  Мир веб-разработки постоянно меняется, и мы <br> стараемся следовать последним тенденциям и новым технологиям.
                 </p>
               </li>
               <li class="steps__item">
@@ -196,7 +196,7 @@
       <section class="briefly">
         <div class="container">
           <div class="briefly__inner">
-            <div class="briefly__left">
+            <div class="briefly__left" data-scroll data-scroll-speed="1">
               <img class="briefly__img" src="img/briefly.svg">
             </div>
             <div class="briefly__right">
@@ -209,35 +209,101 @@
       </section>
 
       <section class="reviews">
-        <div class="reviews__arrows">
-          <img class="reviews__arrow-1" src="img/icons/arrow-left.png">
-          <img class="reviews__arrow-2" src="img/icons/arrow-right.png">
-        </div>
-        <div class="container">
-          <div class="reviews__inner">
-            <h2 class="reviews__title">
-              Отзывы студентов
-            </h2>
-            <ul class="reviews__list">
-              <li class="reviews__item">
-                <img class="reviews__img" src="img/reviews.svg">
-                <p class="reviews__text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab itaque obcaecati, eos, maxime, voluptatem amet perferendis magni excepturi qui praesentium eaque hic! Explicabo quos enim iusto cupiditate culpa eius esse.
-                </p>
-              </li>
-              <li class="reviews__item">
-                <img class="reviews__img" src="img/reviews.svg">
-                <p class="reviews__text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab itaque obcaecati, eos, maxime, voluptatem amet perferendis magni excepturi qui praesentium eaque hic! Explicabo quos enim iusto cupiditate culpa eius esse.
-                </p>
-              </li>
-              <li class="reviews__item">
-                <img class="reviews__img" src="img/reviews.svg">
-                <p class="reviews__text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab itaque obcaecati, eos, maxime, voluptatem amet perferendis magni excepturi qui praesentium eaque hic! Explicabo quos enim iusto cupiditate culpa eius esse.
-                </p>
-              </li>
-            </ul>
+        <div class="reviews__container container">
+          <div class="reviews__wrapper">
+            <div class="reviews__inner">
+              <h2 class="reviews__title">
+                Отзывы студентов
+              </h2>
+              <div class="reviews__slider swiper swiper-three">
+                <ul class="reviews__list swiper-wrapper">
+                  <li class="reviews__item swiper-slide">
+                    <img class="reviews__img" src="img/reviews.svg">
+                    <div class="reviews__text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab itaque obcaecati, eos, maxime, voluptatem amet perferendis magni excepturi qui praesentium eaque hic! Explicabo quos enim iusto cupiditate culpa eius esse.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="reviews__item swiper-slide">
+                    <img class="reviews__img" src="img/reviews.svg">
+                    <div class="reviews__text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab itaque obcaecati, eos, maxime, voluptatem amet perferendis magni excepturi qui praesentium eaque hic! Explicabo quos enim iusto cupiditate culpa eius esse.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="reviews__item swiper-slide">
+                    <img class="reviews__img" src="img/reviews.svg">
+                    <div class="reviews__text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab itaque obcaecati, eos, maxime, voluptatem amet perferendis magni excepturi qui praesentium eaque hic! Explicabo quos enim iusto cupiditate culpa eius esse.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="reviews__item swiper-slide">
+                    <img class="reviews__img" src="img/reviews.svg">
+                    <div class="reviews__text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab itaque obcaecati, eos, maxime, voluptatem amet perferendis magni excepturi qui praesentium eaque hic! Explicabo quos enim iusto cupiditate culpa eius esse.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="reviews__item swiper-slide">
+                    <img class="reviews__img" src="img/reviews.svg">
+                    <div class="reviews__text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab itaque obcaecati, eos, maxime, voluptatem amet perferendis magni excepturi qui praesentium eaque hic! Explicabo quos enim iusto cupiditate culpa eius esse.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="reviews__item swiper-slide">
+                    <img class="reviews__img" src="img/reviews.svg">
+                    <div class="reviews__text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab itaque obcaecati, eos, maxime, voluptatem amet perferendis magni excepturi qui praesentium eaque hic! Explicabo quos enim iusto cupiditate culpa eius esse.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="reviews__item swiper-slide">
+                    <img class="reviews__img" src="img/reviews.svg">
+                    <div class="reviews__text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab itaque obcaecati, eos, maxime, voluptatem amet perferendis magni excepturi qui praesentium eaque hic! Explicabo quos enim iusto cupiditate culpa eius esse.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="reviews__box">
+              <button class="reviews__arrow reviews__arrow--next" type="button">
+                <span class="reviews__circle">
+                  <svg width="90" height="92" viewBox="0 0 90 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M87.794 60.3213C79.6639 83.1544 54.4359 95.1728 31.4453 87.1655C8.45491 79.1583 -3.59188 54.1576 4.53824 31.3246C12.6682 8.49171 37.8965 -3.5268 60.8869 4.4804C73.964 9.035 83.5 19.0875 87.7967 31.1119" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                  </svg>                                             
+                </span>
+                <span class="reviews__arrow-icon">
+                  <svg width="67" height="40" viewBox="0 0 67 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M63.9527 22C65.4884 22 66.7333 21.1045 66.7333 20C66.7333 18.8955 65.4884 18 63.9527 18L2.78057 18C1.24494 18 0 18.8955 0 20C0 21.1045 1.24493 22 2.78057 22L63.9527 22Z" fill="white"/>
+                    <path d="M21.9694 4.1708C22.9341 3.2166 22.9341 1.6697 21.9694 0.715599C21.0046 -0.238501 19.4405 -0.238501 18.4758 0.715599L0.723939 18.2724C-0.240866 19.2267 -0.241048 20.7736 0.723757 21.7278L0.738348 21.7419L18.4758 39.2844C19.4406 40.2385 21.0047 40.2385 21.9694 39.2844C22.9341 38.3303 22.9341 36.7834 21.9694 35.8292L5.96428 20L21.9694 4.1708Z" fill="white"/>
+                  </svg>                    
+                </span>
+              </button>
+              <button class="reviews__arrow reviews__arrow--prev" type="button">
+                <span class="reviews__circle">
+                  <svg width="91" height="92" viewBox="0 0 91 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.94892 31.3247C11.0791 8.49162 36.307 -3.5268 59.2976 4.4805C82.288 12.4877 94.3348 37.4884 86.2047 60.3214C78.0747 83.1543 52.8464 95.1728 29.856 87.1656C16.7789 82.611 7.24291 72.5585 2.94619 60.5341" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                  </svg>                                                                
+                </span>
+                <span class="reviews__arrow-icon">
+                  <svg width="67" height="41" viewBox="0 0 67 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.78066 18.146C1.24498 18.146 0.000101752 19.0415 0.000101752 20.146C0.000101752 21.2505 1.24498 22.146 2.78066 22.146L63.9528 22.146C65.4885 22.146 66.7334 21.2505 66.7334 20.146C66.7334 19.0415 65.4885 18.146 63.9528 18.146L2.78066 18.146Z" fill="white"/>
+                    <path d="M44.764 35.9752C43.7993 36.9294 43.7993 38.4763 44.764 39.4304C45.7288 40.3845 47.2929 40.3845 48.2576 39.4304L66.0095 21.8736C66.9743 20.9193 66.9744 19.3724 66.0096 18.4182L65.9951 18.4041L48.2576 0.861578C47.2928 -0.0925311 45.7287 -0.0925311 44.764 0.861578C43.7993 1.8157 43.7993 3.36264 44.764 4.31675L60.7691 20.146L44.764 35.9752Z" fill="white"/>
+                  </svg>                                    
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -267,7 +333,7 @@
               </form>
             </div>
             <div class="bottom-form__right" data-scroll data-scroll-speed="1">
-              <img class="bottom-form__img" src="img/bottom-form.svg" alt="">
+              <img class="bottom-form__img" src="img/study-form.svg" alt="">
             </div>
           </div>
         </div>

@@ -1651,6 +1651,7 @@
 
   &__right
     max-width: 700px
+    width: 100%
     margin-right: 100px
 
     @include _1400
@@ -1772,39 +1773,79 @@
 .edu
   padding: 200px 0 180px
 
+  @include _767
+    padding: 120px 0 100px
+
   &__title
     text-align: center
     text-transform: none
     font-size: 63px
     max-height: 180px
 
+    @include _1400
+      font-size: 48px
+      line-height: 140%
+
+    @include _991
+      font-size: 36px
+
+    @include _767
+      font-size: 32px
+
+    @include _575
+      font-size: 22px
+
   &__title-text
     display: block
 
+    @include _991
+      display: flex
+      align-items: center
+
 .study-about
   padding: 180px 0 90px
+
+  @include _767
+    padding: 100px 0 60px
 
   &__inner
     background-color: #fff
     border-radius: 114px
     padding: 82px 138px 119px 138px
 
+    @include _1200
+      padding: 82px 70px 119px 70px
+
+    @include _767
+      border-radius: 70px
+      padding: 82px 46px 60px 46px
+
+    @include _575
+      padding: 60px 46px 60px 46px
+
   &__title
-    font-size: 48px
-    font-weight: 700
-    line-height: normal
     background-image: linear-gradient(106deg, #3F82D0 0%, rgba(1, 240, 255, 0.92) 100%)
     background-clip: text
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
     text-align: center
-    padding-bottom: 28px
   
   &__text
     color: #000
     font-size: 24px
     font-weight: 300
     line-height: normal
+
+    @include _1200
+      font-size: 20px
+
+    @include _767
+      font-size: 18px
+      line-height: 140%
+      margin-bottom: 22px
+
+    @include _575
+      font-size: 16px
 
   &__box
     text-align: center
@@ -1816,12 +1857,18 @@
   position: relative
   padding: 90px 0 150px
 
+  @include _767
+    padding: 60px 0 60px
+
   &__list
     display: flex
     flex-wrap: wrap
     justify-content: center 
     gap: 54px
     list-style: none
+
+    @include _767
+      gap: 32px
 
   &__item
     max-width: 492px
@@ -1831,6 +1878,22 @@
     border-radius: 30px
     padding: 40px 0 22px 25px
     background-color: rgba(255, 255, 255, 0.30)
+    transition: background-color .3s
+
+    @include _575
+      padding: 26px 16px 16px 26px
+
+    &:hover
+      background-color: rgba(255, 255, 255, 0.80)
+      transition: background-color .3s
+
+      .steps__item-title
+        color: #3F82D0
+        transition: color .3s
+
+      .steps__item-text
+        color: #3F82D0
+        transition: color .3s
     
     &--hidden
       opacity: 0
@@ -1841,33 +1904,62 @@
 
   &__item-title
     margin-bottom: 18px
+    transition: color .3s
+
+    @include _767
+      font-size: 18px
+
+    @include _575
+      margin-bottom: 12px
     
   &__item-text
     color: #FFF
     font-size: 16px
     font-weight: 300
     line-height: normal
+    transition: color .3s
 
 .briefly
   padding: 150px 0 120px
+
+  @include _767
+    padding: 60px 0 60px
 
   &__inner
     display: flex
     justify-content: space-between
     align-items: center
 
+    @include _991
+      display: block
+
   &__left
     max-width: 823px
     width: 100%
     position: relative
+
+    @include _991
+      margin: 0 auto
 
   &__img
     position: relative
     left: 50%
     transform: translateX(-50%)
 
+    @include _1650
+      max-width: 700px
+
+    @include _1200
+      max-width: 500px
+
+    @include _575
+      width: 100%
+
   &__right
     max-width: 769px
+
+    @include _991
+      margin: 0 auto
 
   &__text
     color: #FFF
@@ -1875,17 +1967,70 @@
     font-weight: 400
     line-height: normal
 
+    @include _1400
+      font-size: 22px
+      
+    @include _1200
+      font-size: 20px
+
+    @include _767
+      font-size: 18px
+
+    @include _575
+      font-size: 16px
+
 .reviews
   padding: 120px 0 130px
-  
-  &__inner
-    min-width: 1600px
+  position: relative
+
+  @include _767
+    padding: 60px 0 60px
+
+  &::before
+    content: ''
+    position: absolute
+    max-width: 1600px
     width: 100%
     height: 100%
-    min-height: 700px
+    background-image: url('../img/reviews-bg.svg')
+    background-size: contain
+    background-repeat: no-repeat
+    left: 40%
+    transform: translateX(-50%)
+    top: 0
+    z-index: 1
+
+    @include _767
+      left: 50%
+      top: 5%
+      maxh-height: 400px
+  
+  &__container
+    max-width: 1870px
+
+  &__wrapper
+    padding: 0 120px
+    position: relative
+
+    @include _767
+      padding: 0
+  
+  &__inner
+    position: relative
+    max-width: 1600px
+    width: 100%
+    padding: 47px 27px 100px 27px
     border-radius: 114px
     background-color: rgba(255, 255, 255, 0.30)
     backdrop-filter: blur(50px)
+    z-index: 2
+
+    @include _991
+      border-radius: 80px
+
+    @include _767
+      padding: 47px 27px 120px 27px
+      border-radius: 70px
 
   &__title
     color: #FFF
@@ -1894,40 +2039,131 @@
     font-weight: 600
     line-height: normal
     text-align: center
-    padding-top: 47px
-    padding-bottom: 57px
+    margin-bottom: 57px
 
-  &__list
-    display: flex
-    flex-wrap: wrap
-    justify-content: center 
-    gap: 36px
-    list-style-type: none
+    @include _767
+      margin-bottom: 32px
 
   &__item
     text-align: center
     max-width: 485px
     width: 100%
     height: auto
-    flex-shrink: 0
+    border-radius: 32px
     padding: 40px 53px 62px 53px
     background-color: rgba(255, 255, 255, 0.50)
 
+    @include _991
+      max-width: 100%
+
+    @include _767
+      padding: 40px 30px 40px 30px
+
   &__img
-    padding-bottom: 38px
+    margin-bottom: 38px
+    border-radius: 50%
+
+    @include _767
+      max-width: 70px
 
   &__text
     color: black
+    line-height: 135%
 
-  &__arrows
+    @include _767
+      font-size: 18px
+
+    @include _575
+      font-size: 16px
+
+  &__box
+    @include _767
+      display: flex
+      justify-content: space-between
+      max-width: 144px
+      width: 100%
+      position: absolute
+      left: 50%
+      bottom: 16px
+      transform: translateX(-50%)
+      z-index: 3
+
+  &__arrow
     position: absolute
-    align-items: center
-    display: flex
-    justify-content: space-between
-    padding-top: 278px
+    background-color: transparent
+    cursor: pointer
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 3
+
+    @include _767
+      position: relative
+      top: auto
+      bottom: 0
+      transform: translateY(0)
+
+    &:hover
+      .reviews__circle
+        transform: scale(1.1)
+        transition: transform .3s
+
+    &--next
+      left: 0
+
+      &:hover
+        .reviews__arrow-icon
+          transform: translate(-5px, -50%)
+          transition: transform .3s
+
+      .reviews__arrow-icon
+        transform: translate(15px, -50%)
+        right: 0
+
+        @include _767
+          transform: translate(8px, -50%)
+
+    &--prev
+      right: 0
+
+      &:hover
+        .reviews__arrow-icon
+          transform: translate(5px, -50%)
+          transition: transform .3s
+
+      .reviews__arrow-icon
+        transform: translate(-15px, -50%)
+        left: 0
+
+        @include _767
+          transform: translate(-8px, -50%)
+
+  &__circle
+    display: block
+    transition: transform .3s
+
+    svg
+      max-width: 80px
+      max-height: 88px
+
+      @include _767
+        max-width: 52px
+        max-height: 53px
+
+  &__arrow-icon
+    display: block
+    position: absolute
+    top: 50%
+    transition: transform .3s
+
+    svg
+      max-width: 57px
+      max-height: 34px
+
+      @include _767
+        max-width: 36px
+        max-height: 22px
 
 .solutions
-
   &__inner
     display: flex
     justify-content: space-between
