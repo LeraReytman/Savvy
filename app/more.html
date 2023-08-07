@@ -50,93 +50,1038 @@
   <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
-    <main>
 
-        <div class="main-wrapper" data-scroll-container>
-            <header class="header">
-              <div class="container">
-                <div class="header__inner">
-                  <a class="logo" href="#">
-                    <img class="logo__img" src="img/icons/logo.svg" alt="">
-                  </a>
-                  <nav class="menu">
-                    <ul class="menu__list">
-                      <li class="menu__item">
-                        <a class="menu__link" href="#">О нас</a>
+<body>
+
+  <div class="more-wrapper" id="top-scroll" data-scroll-container>
+
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="logo" href="#">
+            <img class="logo__img" src="img/icons/logo.svg" alt="">
+          </a>
+          <nav class="menu menu--header">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#">О нас</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Креативные решения</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Наши проекты</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Обратная связь</a>
+              </li>
+            </ul>
+            <a class="header__num header__num--small" href="tel:+79785000623">+7978 500 06 23</a>
+          </nav>
+          <div class="header__right">
+            <a class="header__num header__num--main anim-line" href="tel:+79785000623">+7978 500 06 23</a>
+            <button class="header__btn btn btn-anim-color" type="button">Кликните, чтобы начать!</button>
+            <button class="header__burger">
+              <span class="header__burger-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <setion class="solutions">
+        <div class="container">
+          <div class="solutions__inner">
+            <div class="solutions__left" data-scroll data-scroll-speed="5">
+              <img class="solutions__img" src="img/more.svg">
+            </div>
+            <div class="solutions__right" data-scroll data-scroll-speed="2">
+              <h2 class="solutions__title title-two">
+                Мы стремимся создавать уникальные веб-решения 
+              </h2>
+              <div class="solutions__text">
+                <p>
+                  которые помогут вам достичь успеха в онлайн-мире и выделиться среди конкурентов.
+                </p>
+              </div>
+              <button class="solutions__btn btn btn-anim-color">
+                Подробнее
+              </button>
+            </div>
+          </div>
+        </div>
+      </setion>
+
+      <section class="web">
+        <div class="container">
+          <div class="web__inner">
+            <div class="web__left">
+              <h2 class="web__title title-two">
+                ВЕБ-РАЗРАБОТКА И ДИЗАЙН
+              </h2>
+              <div class="web__box">
+                <ul class="web__list" data-scroll data-scroll-speed="1">
+                  <li class="web__item">
+                    <h3 class="web__item-title">
+                      Сайт визитка
+                    </h3>
+                    <p class="web__item-text">
+                      Небольшая презентация предприятия, рассказ о его деятельности, услугах, товарах.
+                    </p>
+                  </li>
+                  <li class="web__item">
+                    <h3 class="web__item-title">
+                      Сайт каталог
+                    </h3>
+                    <p class="web__item-text">
+                      Каталог услуг или товаров, небольшая презентация предприятия, может представляет упрощенный вариант интернет магазина.
+                    </p>
+                  </li>
+                  <li class="web__item">
+                    <h3 class="web__item-title">
+                      Лендинг
+                    </h3>
+                    <p class="web__item-text">
+                      Одностраничный сайт по индивидуальному дизайну, направленный на рекламу...
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- <div class="web__right">
+              <img class="web__img" src="img/web.svg">
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+      <section class="about-services">
+        <div class="container">
+          <ul class="about-services__items">
+            <li class="about-services__item about-services__item--first about-services__item--active">
+              <div class="about-services__item-inner">
+                <div class="about-services__top">
+                  <h2 class="about-services__item-title">
+                    САЙТ ВИЗИТКА
+                  </h2>
+                  <span class="about-services__item-price">
+                    ОТ 15 000 РУБЛЕЙ
+                  </span>
+                  <ul class="about-services__icons">
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-1.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Дизайн
+                      </span>
+                    </li>
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-2.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Наполнение
+                      </span>
+                    </li>
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-3.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Вёрстка
+                      </span>
+                    </li>
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-4.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Адаптив
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="about-services__wrapper">
+                  <div class="about-services__content">
+                    <h3 class="about-services__content-title">
+                      Начало разработки сайта
+                    </h3>
+                    <div class="about-services__content-text">
+                      <p>
+                        Для начала работы нам нужна 50% предоплата на расчетный счет, после чего приступаем к составлению детального технического задания. Работаем официально, договор, оригинал счета, акт выполненных работ предоставим.
+                      </p>
+                    </div>
+                    <ul class="about-services__content-items">
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">1. Консультация и планирование:</span> Наш первый шаг — беседа с вами о ваших потребностях, целях, целевой аудитории и вашей уникальной брендовой идентичности. Мы уточняем требования и определяем, как лучше всего представить ваш бизнес или проект на сайте.
                       </li>
-                      <li class="menu__item">
-                        <a class="menu__link" href="#">Креативные решения</a>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">2. Анализ конкурентов и исследование рынка:</span> Мы проводим анализ конкурентов и исследуем вашу целевую аудиторию и рынок, чтобы определить лучшие практики и стратегии для создания сайта, который будет привлекать внимание и удерживать посетителей.
                       </li>
-                      <li class="menu__item">
-                        <a class="menu__link" href="#">Наши проекты</a>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">3. Дизайн и макет:</span> Наши опытные дизайнеры создают уникальный дизайн сайта визитки, который соответствует вашему бренду и отражает вашу уникальность. Мы учитываем ваши предпочтения и стремимся к простоте, функциональности и эстетике.
                       </li>
-                      <li class="menu__item">
-                        <a class="menu__link" href="#">Обратная связь</a>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">4. Разработка:</span> Когда макет утвержден, наша команда разработчиков приступает к созданию сайта. Мы используем современные технологии и инструменты, чтобы обеспечить оптимальную производительность и адаптивность сайта для разных устройств.
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">5. Контент и SEO:</span> Мы помогаем с оптимизацией контента, чтобы он был привлекателен и информативен для посетителей. Также мы обращаем внимание на базовую SEO-оптимизацию, чтобы ваш сайт легче находился в поисковых результатах.
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">6. Тестирование:</span> Перед запуском мы тщательно тестируем сайт, чтобы убедиться, что он работает без ошибок на различных платформах и браузерах.
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">7. Запуск и поддержка:</span> После успешного завершения тестирования и утверждения вами, мы запускаем ваш сайт. Мы также предоставляем поддержку и обслуживание после запуска, чтобы помочь вам справиться с любыми вопросами или обновлениями.
                       </li>
                     </ul>
-                    <a class="header__num header__num--small" href="tel:+79785000623">+7978 500 06 23</a>
-                  </nav>
-                  <div class="header__right">
-                    <a class="header__num header__num--main anim-line" href="tel:+79785000623">+7978 500 06 23</a>
-                    <button class="header__btn btn btn-anim-color" type="button">Кликните, чтобы начать!</button>
-                    <button class="header__burger">
-                      <span class="header__burger-icon"></span>
-                    </button>
+                    <div class="about-services__bottom-text">
+                      <p>
+                        Наша веб-студия  Savvy, готова реализовать вашу идею и создать красивый, функциональный и успешный сайт визитку. Наш приоритет — ваш успех в онлайн-мире!
+                      </p>
+                    </div>
+                    <div class="about-services__free">
+                      <span class="about-services__firee-top">
+                        Домен и хостинг на 1 год
+                      </span>
+                      <span class="about-services__free-bottom">
+                        БЕСПЛАТНО
+                      </span>
+                    </div>
+                    <div class="about-services__content-box">
+                      <a class="about-services__content-btn btn" href="#">
+                        Заказать
+                      </a>
+                      <button class="about-services__open about-services__open--close" type="button">
+                        <span class="about-services__btn-bg">
+                          <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.12132" y="35.4767" width="50" height="50" rx="3.5" transform="rotate(-45 0.12132 35.4767)" stroke="#14F0FF" stroke-width="3"/>
+                          </svg>                    
+                        </span>
+                        <span class="about-services__btn-arrow">
+                          <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.7998 1.45833C12.7998 0.652908 12.2849 -1.46662e-06 11.6498 -1.46662e-06C11.0147 -1.46662e-06 10.4998 0.652908 10.4998 1.45833L10.4998 33.5417C10.4998 34.3471 11.0147 35 11.6498 35C12.2849 35 12.7998 34.3471 12.7998 33.5417L12.7998 1.45833Z" fill="#01F0FF"/>
+                            <path d="M2.42064 22.4199C1.86685 21.8601 0.969075 21.8601 0.415344 22.4199C-0.138387 22.9799 -0.138387 23.8876 0.415344 24.4475L10.6048 34.7502C11.1586 35.3101 12.0564 35.3102 12.6102 34.7503L12.6184 34.7418L22.7995 24.4475C23.3533 23.8876 23.3533 22.9798 22.7995 22.4199C22.2458 21.8601 21.348 21.8601 20.7943 22.4199L11.6074 31.7088L2.42064 22.4199Z" fill="#01F0FF"/>
+                          </svg>                    
+                        </span>
+                      </button>
+                    </div>
                   </div>
                 </div>
+                <div class="about-services__box">
+                  <button class="about-services__open about-services__open--open" type="button">
+                    <span class="about-services__btn-bg">
+                      <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.12132" y="35.4767" width="50" height="50" rx="3.5" transform="rotate(-45 0.12132 35.4767)" stroke="#14F0FF" stroke-width="3"/>
+                      </svg>                    
+                    </span>
+                    <span class="about-services__btn-arrow">
+                      <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.7998 1.45833C12.7998 0.652908 12.2849 -1.46662e-06 11.6498 -1.46662e-06C11.0147 -1.46662e-06 10.4998 0.652908 10.4998 1.45833L10.4998 33.5417C10.4998 34.3471 11.0147 35 11.6498 35C12.2849 35 12.7998 34.3471 12.7998 33.5417L12.7998 1.45833Z" fill="#01F0FF"/>
+                        <path d="M2.42064 22.4199C1.86685 21.8601 0.969075 21.8601 0.415344 22.4199C-0.138387 22.9799 -0.138387 23.8876 0.415344 24.4475L10.6048 34.7502C11.1586 35.3101 12.0564 35.3102 12.6102 34.7503L12.6184 34.7418L22.7995 24.4475C23.3533 23.8876 23.3533 22.9798 22.7995 22.4199C22.2458 21.8601 21.348 21.8601 20.7943 22.4199L11.6074 31.7088L2.42064 22.4199Z" fill="#01F0FF"/>
+                      </svg>                    
+                    </span>
+                  </button>
+                </div>
               </div>
-            </header>
-
-        <setion class="solutions">
-            <div class="container">
-                <div class="solutions__inner">
-                    <div class="solitions__left">
-                            <img class="solutions__img" src="img/more.svg">
-                        </div>
-                        <div class="solutions__right">
-                            <div class="solutions__txt">
-                                <h2 class="solutions__title">
-                                    Мы стремимся создавать уникальные веб-решения 
-                                </h2>
-                                <p class="solutions__text">
-                                    которые помогут вам достичь успеха в онлайн-мире и выделиться среди конкурентов.
-                            </p>
-                        </div>
-                        <button class="solutions__btn">
-                            <span class="solutions__btn-text">Подробнее</span>
-                        </button>
-                    </div>
+            </li>
+            <li class="about-services__item">
+              <div class="about-services__item-inner">
+                <div class="about-services__top">
+                  <h2 class="about-services__item-title">
+                    САЙТ КАТАЛОГ
+                  </h2>
+                  <span class="about-services__item-price">
+                    ОТ 20 000 РУБЛЕЙ
+                  </span>
+                  <ul class="about-services__icons">
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-1.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Дизайн
+                      </span>
+                    </li>
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-2.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Наполнение
+                      </span>
+                    </li>
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-3.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Вёрстка
+                      </span>
+                    </li>
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-4.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Адаптив
+                      </span>
+                    </li>
+                  </ul>
                 </div>
-            </div>
-         </setion>
-
-         <section class="web">
-            <div class="container">
-                <div class="web__inner">
-                    <div class="web__left">
-                        <h2 class="web__title">
-                            ВЕБ-РАЗРАБОТКА И ДИЗАЙН
-                        </h2>
-                        <div class="web__box">
-                            <ul class="web__list">
-                                <li class="web__item">
-                                    <h3 class="web__item-title">
-                                        Сайт визитка
-                                    </h3>
-                                    <p class="web__item-text">
-                                        Небольшая презентация предприятия, рассказ о его деятельности, услугах, товарах.
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="about-services__wrapper">
+                  <div class="about-services__content">
+                    <h3 class="about-services__content-title">
+                      Начало разработки сайта
+                    </h3>
+                    <div class="about-services__content-text">
+                      <p>
+                        Для начала работы нам нужна 50% предоплата на расчетный счет, после чего приступаем к составлению детального технического задания. Работаем официально, договор, оригинал счета, акт выполненных работ предоставим.
+                      </p>
                     </div>
-                    <div class="web__right">
-                        <img class="web__img" src="img/web.svg">
+                    <ul class="about-services__content-items">
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">1. Исследование и планирование:</span> Наш первый шаг — внимательно изучить ваш бизнес, цели, ассортимент товаров или услуг, а также вашу целевую аудиторию. Мы определяем, какие категории товаров или услуг будут представлены на сайте-каталоге, какой функционал требуется, и как лучше всего организовать информацию.
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">2. Проектирование структуры и макета:</span> Мы разрабатываем структуру сайта-каталога, определяя иерархию страниц, категорий, фильтров и других элементов. Затем создаем макеты, чтобы визуализировать общий вид сайта и обсуждать их с вами.
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">3. Дизайн:</span> Наши опытные дизайнеры создают уникальный дизайн сайта-каталога, соответствующий вашему бренду и привлекающий внимание посетителей. Мы уделяем внимание удобству использования, навигации и понятности интерфейса.
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">4. Разработка:</span> После утверждения макетов и дизайна, наши разработчики приступают к созданию сайта-каталога. Мы используем современные технологии и платформы для разработки, чтобы обеспечить функциональность и производительность сайта.
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">5. Тестирование:</span> Перед запуском мы проводим тестирование сайта-каталога, чтобы убедиться, что все работает корректно, а пользователи могут без проблем пользоваться функциональностью.
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">6. Тестирование:</span> Перед запуском мы тщательно тестируем сайт, чтобы убедиться, что он работает без ошибок на различных платформах и браузерах.
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">7. Запуск и обслуживание:</span> После успешного тестирования мы запускаем ваш сайт-каталог. Мы также предоставляем поддержку и обслуживание, чтобы обеспечить его безотказную работу и помощь в случае возникновения вопросов или обновлений.
+                      </li>
+                    </ul>
+                    <div class="about-services__bottom-text">
+                      <p>
+                        Наша веб-студия, поможет создать функциональный и привлекательный сайт-каталог, который поможет вашему бизнесу расшириться и успешно представить ваш ассортимент в онлайн-мире.
+                      </p>
                     </div>
+                    <div class="about-services__content-box">
+                      <a class="about-services__content-btn btn" href="#">
+                        Заказать
+                      </a>
+                      <button class="about-services__open about-services__open--close" type="button">
+                        <span class="about-services__btn-bg">
+                          <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.12132" y="35.4767" width="50" height="50" rx="3.5" transform="rotate(-45 0.12132 35.4767)" stroke="#14F0FF" stroke-width="3"/>
+                          </svg>                    
+                        </span>
+                        <span class="about-services__btn-arrow">
+                          <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.7998 1.45833C12.7998 0.652908 12.2849 -1.46662e-06 11.6498 -1.46662e-06C11.0147 -1.46662e-06 10.4998 0.652908 10.4998 1.45833L10.4998 33.5417C10.4998 34.3471 11.0147 35 11.6498 35C12.2849 35 12.7998 34.3471 12.7998 33.5417L12.7998 1.45833Z" fill="#01F0FF"/>
+                            <path d="M2.42064 22.4199C1.86685 21.8601 0.969075 21.8601 0.415344 22.4199C-0.138387 22.9799 -0.138387 23.8876 0.415344 24.4475L10.6048 34.7502C11.1586 35.3101 12.0564 35.3102 12.6102 34.7503L12.6184 34.7418L22.7995 24.4475C23.3533 23.8876 23.3533 22.9798 22.7995 22.4199C22.2458 21.8601 21.348 21.8601 20.7943 22.4199L11.6074 31.7088L2.42064 22.4199Z" fill="#01F0FF"/>
+                          </svg>                    
+                        </span>
+                      </button>
+                    </div>
+                  </div>
                 </div>
+                <div class="about-services__box">
+                  <button class="about-services__open about-services__open--open" type="button">
+                    <span class="about-services__btn-bg">
+                      <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.12132" y="35.4767" width="50" height="50" rx="3.5" transform="rotate(-45 0.12132 35.4767)" stroke="#14F0FF" stroke-width="3"/>
+                      </svg>                    
+                    </span>
+                    <span class="about-services__btn-arrow">
+                      <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.7998 1.45833C12.7998 0.652908 12.2849 -1.46662e-06 11.6498 -1.46662e-06C11.0147 -1.46662e-06 10.4998 0.652908 10.4998 1.45833L10.4998 33.5417C10.4998 34.3471 11.0147 35 11.6498 35C12.2849 35 12.7998 34.3471 12.7998 33.5417L12.7998 1.45833Z" fill="#01F0FF"/>
+                        <path d="M2.42064 22.4199C1.86685 21.8601 0.969075 21.8601 0.415344 22.4199C-0.138387 22.9799 -0.138387 23.8876 0.415344 24.4475L10.6048 34.7502C11.1586 35.3101 12.0564 35.3102 12.6102 34.7503L12.6184 34.7418L22.7995 24.4475C23.3533 23.8876 23.3533 22.9798 22.7995 22.4199C22.2458 21.8601 21.348 21.8601 20.7943 22.4199L11.6074 31.7088L2.42064 22.4199Z" fill="#01F0FF"/>
+                      </svg>                    
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="about-services__item">
+              <div class="about-services__item-inner">
+                <div class="about-services__top">
+                  <h2 class="about-services__item-title">
+                    ЛЕНДИНГ
+                  </h2>
+                  <span class="about-services__item-price">
+                    ОТ 20 000 РУБЛЕЙ
+                  </span>
+                  <ul class="about-services__icons">
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-1.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Дизайн
+                      </span>
+                    </li>
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-2.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Наполнение
+                      </span>
+                    </li>
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-3.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Вёрстка
+                      </span>
+                    </li>
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-4.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Адаптив
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="about-services__wrapper">
+                  <div class="about-services__content">
+                    <h3 class="about-services__content-title">
+                      Начало разработки сайта
+                    </h3>
+                    <div class="about-services__content-text">
+                      <p>
+                        Для начала работы нам нужна 50% предоплата на расчетный счет, после чего приступаем к составлению детального технического задания. Работаем официально, договор, оригинал счета, акт выполненных работ предоставим.
+                      </p>
+                    </div>
+                    <ul class="about-services__content-items">
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">1. Исследование и планирование:</span> Наш первый шаг — внимательно изучить вашу целевую аудиторию, цели и ключевые моменты, которые хотите подчеркнуть на лендинге. Мы определяем основные преимущества вашего продукта или услуги и уточняем, какие действия вы хотите, чтобы посетители совершили на сайте.
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">2. Проектирование структуры и макета:</span> Мы разрабатываем структуру лендинга, определяя последовательность блоков информации и их расположение на странице. Затем создаем макеты, чтобы визуализировать общий вид лендинга и обсуждать их с вами.
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">3. Дизайн:</span> Наши талантливые дизайнеры создают привлекательный и интуитивно понятный дизайн лендинга. Мы учитываем вашу брендовую идентичность, цветовую палитру и используем элементы, которые приведут посетителей к желаемым действиям.
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">4. Разработка:</span> Когда макет и дизайн утверждены, наши разработчики приступают к созданию лендинга. Мы используем современные технологии и платформы, чтобы обеспечить быструю загрузку страницы и отзывчивость сайта на всех устройствах.
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">5. Контент и Call-to-Action (CTA):</span> Мы помогаем с подготовкой продающего контента, который привлечет внимание посетителей и подчеркнет преимущества вашего предложения. Каждый блок информации снабжается эффективным призывом к действию (CTA), чтобы побудить посетителей совершить необходимое действие — например, оставить контактные данные, купить продукт или зарегистрироваться на мероприятие.
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">6. Тестирование:</span> Перед запуском, мы проводим тестирование лендинга, чтобы убедиться, что все работает корректно и нет ошибок, а также проверяем работоспособность CTA.
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">7. Запуск и аналитика:</span> После успешного тестирования мы запускаем ваш лендинг. Мы также устанавливаем аналитические инструменты, чтобы отслеживать эффективность страницы и проводим анализ для дальнейшего улучшения результатов.
+                      </li>
+                    </ul>
+                    <div class="about-services__bottom-text">
+                      <p>
+                        У нас в Savvy веб-студии есть опыт и знания, чтобы создать лендинг, который привлечет внимание и превратит посетителей в клиентов. Наш приоритет — ваш успех в привлечении целевой аудитории и достижении ваших бизнес-целей!
+                      </p>
+                    </div>
+                    <div class="about-services__content-box">
+                      <a class="about-services__content-btn btn" href="#">
+                        Заказать
+                      </a>
+                      <button class="about-services__open about-services__open--close" type="button">
+                        <span class="about-services__btn-bg">
+                          <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.12132" y="35.4767" width="50" height="50" rx="3.5" transform="rotate(-45 0.12132 35.4767)" stroke="#14F0FF" stroke-width="3"/>
+                          </svg>                    
+                        </span>
+                        <span class="about-services__btn-arrow">
+                          <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.7998 1.45833C12.7998 0.652908 12.2849 -1.46662e-06 11.6498 -1.46662e-06C11.0147 -1.46662e-06 10.4998 0.652908 10.4998 1.45833L10.4998 33.5417C10.4998 34.3471 11.0147 35 11.6498 35C12.2849 35 12.7998 34.3471 12.7998 33.5417L12.7998 1.45833Z" fill="#01F0FF"/>
+                            <path d="M2.42064 22.4199C1.86685 21.8601 0.969075 21.8601 0.415344 22.4199C-0.138387 22.9799 -0.138387 23.8876 0.415344 24.4475L10.6048 34.7502C11.1586 35.3101 12.0564 35.3102 12.6102 34.7503L12.6184 34.7418L22.7995 24.4475C23.3533 23.8876 23.3533 22.9798 22.7995 22.4199C22.2458 21.8601 21.348 21.8601 20.7943 22.4199L11.6074 31.7088L2.42064 22.4199Z" fill="#01F0FF"/>
+                          </svg>                    
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-services__box">
+                  <button class="about-services__open about-services__open--open" type="button">
+                    <span class="about-services__btn-bg">
+                      <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.12132" y="35.4767" width="50" height="50" rx="3.5" transform="rotate(-45 0.12132 35.4767)" stroke="#14F0FF" stroke-width="3"/>
+                      </svg>                    
+                    </span>
+                    <span class="about-services__btn-arrow">
+                      <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.7998 1.45833C12.7998 0.652908 12.2849 -1.46662e-06 11.6498 -1.46662e-06C11.0147 -1.46662e-06 10.4998 0.652908 10.4998 1.45833L10.4998 33.5417C10.4998 34.3471 11.0147 35 11.6498 35C12.2849 35 12.7998 34.3471 12.7998 33.5417L12.7998 1.45833Z" fill="#01F0FF"/>
+                        <path d="M2.42064 22.4199C1.86685 21.8601 0.969075 21.8601 0.415344 22.4199C-0.138387 22.9799 -0.138387 23.8876 0.415344 24.4475L10.6048 34.7502C11.1586 35.3101 12.0564 35.3102 12.6102 34.7503L12.6184 34.7418L22.7995 24.4475C23.3533 23.8876 23.3533 22.9798 22.7995 22.4199C22.2458 21.8601 21.348 21.8601 20.7943 22.4199L11.6074 31.7088L2.42064 22.4199Z" fill="#01F0FF"/>
+                      </svg>                    
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="about-services__item">
+              <div class="about-services__item-inner">
+                <div class="about-services__top">
+                  <h2 class="about-services__item-title">
+                    СОЗДАНИЕ И ОПТИМИЗАЦИЯ ВЕБ-САЙТОВ
+                  </h2>
+                  <span class="about-services__item-price">
+                    ОТ 20 000 РУБЛЕЙ
+                  </span>
+                  <ul class="about-services__icons">
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-1.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Дизайн
+                      </span>
+                    </li>
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-2.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Наполнение
+                      </span>
+                    </li>
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-3.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Вёрстка
+                      </span>
+                    </li>
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-4.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Адаптив
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="about-services__wrapper">
+                  <div class="about-services__content">
+                    <h3 class="about-services__content-title">
+                      Начало разработки сайта
+                    </h3>
+                    <div class="about-services__content-text">
+                      <p>
+                        Для начала работы нам нужна 50% предоплата на расчетный счет, после чего приступаем к составлению детального технического задания. Работаем официально, договор, оригинал счета, акт выполненных работ предоставим.
+                        <span class="about-services__content-text--weight">Создание и оптимизация веб-сайта</span> - это комплексный процесс, включающий несколько этапов, чтобы создать эффективную и успешную онлайн-платформу. 
+                      </p>
+                    </div>
+                    <ul class="about-services__content-items">
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font about-services__content-font--list">1. Исследование и планирование:</span>
+                        <ol class="about-services__item-items">
+                          <li class="about-services__item-item">
+                            Определение целей: Первый шаг - это определение целей вашего сайта. Что вы хотите достичь с помощью этого сайта? Какую аудиторию вы хотите привлечь?
+                          </li>
+                          <li class="about-services__item-item">
+                            Исследование рынка: Изучение конкурентов и анализ рынка поможет понять текущие тренды и лучшие практики в вашей отрасли.
+                          </li>
+                          <li class="about-services__item-item">
+                            Планирование структуры: Определение структуры сайта и его основных разделов, чтобы обеспечить логичную навигацию и удобство для пользователей.
+                          </li>
+                        </ol>
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font about-services__content-font--list">2. UI/UX-дизайн:</span>
+                        <ol class="about-services__item-items">
+                          <li class="about-services__item-item">
+                            Создание макетов: Дизайнеры разрабатывают макеты, отображающие внешний вид и расположение элементов на страницах сайта.
+                          </li>
+                          <li class="about-services__item-item">
+                            Прототипирование: Создание интерактивных прототипов, позволяющих проверить функциональность и удобство использования интерфейса.
+                          </li>
+                          <li class="about-services__item-item">
+                            Визуальный дизайн: Разработка уникального визуального стиля, соответствующего вашему бренду и привлекающего внимание пользователей.
+                          </li>
+                        </ol>
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font about-services__content-font--list">3. Разработка:</span>
+                        <ol class="about-services__item-items">
+                          <li class="about-services__item-item">
+                            Front-end: Кодирование макетов в HTML, CSS и JavaScript, чтобы создать интерактивный пользовательский интерфейс.
+                          </li>
+                          <li class="about-services__item-item">
+                            Back-end: Разработка серверной части сайта, обеспечивающей функциональность и взаимодействие с базой данных.
+                          </li>
+                          <li class="about-services__item-item">
+                            CMS (система управления контентом): При необходимости, интеграция CMS, чтобы упростить управление контентом на сайте.
+                          </li>
+                        </ol>
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font about-services__content-font--list">4. Тестирование и отладка:</span>
+                        <ol class="about-services__item-items">
+                          <li class="about-services__item-item">
+                            Тестирование функциональности: Проверка всех элементов сайта на работоспособность и соответствие заданным требованиям.
+                          </li>
+                          <li class="about-services__item-item">
+                            Адаптивность: Проверка сайта на различных устройствах и браузерах, чтобы обеспечить адаптивность и кросс-браузерную совместимость.
+                          </li>
+                          <li class="about-services__item-item">
+                            Отладка: Исправление ошибок и устранение неполадок, обнаруженных в процессе тестирования.
+                          </li>
+                        </ol>
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font about-services__content-font--list">5. Оптимизация::</span>
+                        <ol class="about-services__item-items">
+                          <li class="about-services__item-item">
+                            SEO: Процесс оптимизации сайта для поисковых систем, чтобы повысить его видимость в результатах поиска.
+                          </li>
+                          <li class="about-services__item-item">
+                            Производительность: Оптимизация скорости загрузки сайта и его производительности, чтобы улучшить пользовательский опыт.
+                          </li>
+                          <li class="about-services__item-item">
+                            Аналитика: Установка аналитических инструментов для отслеживания и анализа поведения пользователей на сайте.
+                          </li>
+                        </ol>
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font about-services__content-font--list">6. Релиз и поддержка:</span>
+                        <ol class="about-services__item-items">
+                          <li class="about-services__item-item">
+                            Релиз: Размещение сайта на хостинге и его публикация, чтобы он стал доступен для посетителей.
+                          </li>
+                          <li class="about-services__item-item">
+                            Поддержка: Постоянная техническая поддержка, включая обновления, резервное копирование и помощь в разрешении проблем.
+                          </li>
+                        </ol>
+                      </li>
+                    </ul>
+                    <div class="about-services__content-box">
+                      <a class="about-services__content-btn btn" href="#">
+                        Заказать
+                      </a>
+                      <button class="about-services__open about-services__open--close" type="button">
+                        <span class="about-services__btn-bg">
+                          <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.12132" y="35.4767" width="50" height="50" rx="3.5" transform="rotate(-45 0.12132 35.4767)" stroke="#14F0FF" stroke-width="3"/>
+                          </svg>                    
+                        </span>
+                        <span class="about-services__btn-arrow">
+                          <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.7998 1.45833C12.7998 0.652908 12.2849 -1.46662e-06 11.6498 -1.46662e-06C11.0147 -1.46662e-06 10.4998 0.652908 10.4998 1.45833L10.4998 33.5417C10.4998 34.3471 11.0147 35 11.6498 35C12.2849 35 12.7998 34.3471 12.7998 33.5417L12.7998 1.45833Z" fill="#01F0FF"/>
+                            <path d="M2.42064 22.4199C1.86685 21.8601 0.969075 21.8601 0.415344 22.4199C-0.138387 22.9799 -0.138387 23.8876 0.415344 24.4475L10.6048 34.7502C11.1586 35.3101 12.0564 35.3102 12.6102 34.7503L12.6184 34.7418L22.7995 24.4475C23.3533 23.8876 23.3533 22.9798 22.7995 22.4199C22.2458 21.8601 21.348 21.8601 20.7943 22.4199L11.6074 31.7088L2.42064 22.4199Z" fill="#01F0FF"/>
+                          </svg>                    
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-services__box">
+                  <button class="about-services__open about-services__open--open" type="button">
+                    <span class="about-services__btn-bg">
+                      <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.12132" y="35.4767" width="50" height="50" rx="3.5" transform="rotate(-45 0.12132 35.4767)" stroke="#14F0FF" stroke-width="3"/>
+                      </svg>                    
+                    </span>
+                    <span class="about-services__btn-arrow">
+                      <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.7998 1.45833C12.7998 0.652908 12.2849 -1.46662e-06 11.6498 -1.46662e-06C11.0147 -1.46662e-06 10.4998 0.652908 10.4998 1.45833L10.4998 33.5417C10.4998 34.3471 11.0147 35 11.6498 35C12.2849 35 12.7998 34.3471 12.7998 33.5417L12.7998 1.45833Z" fill="#01F0FF"/>
+                        <path d="M2.42064 22.4199C1.86685 21.8601 0.969075 21.8601 0.415344 22.4199C-0.138387 22.9799 -0.138387 23.8876 0.415344 24.4475L10.6048 34.7502C11.1586 35.3101 12.0564 35.3102 12.6102 34.7503L12.6184 34.7418L22.7995 24.4475C23.3533 23.8876 23.3533 22.9798 22.7995 22.4199C22.2458 21.8601 21.348 21.8601 20.7943 22.4199L11.6074 31.7088L2.42064 22.4199Z" fill="#01F0FF"/>
+                      </svg>                    
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="about-services__item">
+              <div class="about-services__item-inner">
+                <div class="about-services__top">
+                  <h2 class="about-services__item-title">
+                    UI/UX-ДИЗАЙН
+                  </h2>
+                  <span class="about-services__item-price">
+                    ОТ 20 000 РУБЛЕЙ
+                  </span>
+                  <ul class="about-services__icons">
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-1.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Дизайн
+                      </span>
+                    </li>
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-2.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Наполнение
+                      </span>
+                    </li>
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-3.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Вёрстка
+                      </span>
+                    </li>
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-4.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Адаптив
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="about-services__wrapper">
+                  <div class="about-services__content">
+                    <h3 class="about-services__content-title">
+                      Начало разработки сайта
+                    </h3>
+                    <div class="about-services__content-text">
+                      <p>
+                        Для начала работы нам нужна 50% предоплата на расчетный счет, после чего приступаем к составлению детального технического задания. Работаем официально, договор, оригинал счета, акт выполненных работ предоставим.
+                      </p>
+                    </div>
+                    <ul class="about-services__content-items">
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">1. Исследование и анализ:</span> Важный шаг перед началом разработки дизайна - это исследование и анализ вашего бизнеса, вашей аудитории и конкурентов. Мы выясняем, какие задачи должен выполнять ваш сайт и какие ожидания имеют ваши пользователи.
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">2. Создание пользовательских профилей:</span> Мы создаем персонажей или пользовательские профили, чтобы лучше понять потребности и предпочтения вашей целевой аудитории. Это помогает нам принимать решения в дизайне, учитывая потребности конкретных пользователей.
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">3. Прототипирование:</span> Мы создаем интерактивные прототипы дизайна, чтобы показать, как будет выглядеть и функционировать сайт в реальной среде. Это позволяет нам проверить и улучшить пользовательский опыт на раннем этапе разработки.
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">4. Адаптивный дизайн:</span> Учитывая разнообразие устройств, на которых пользователи могут посещать ваш сайт, мы создаем адаптивный дизайн, который хорошо выглядит и работает на различных экранах - от настольных компьютеров до смартфонов.
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">5. Тестирование и итерации:</span> Мы проводим тестирование дизайна на реальных пользователях, чтобы оценить его эффективность и выявить потенциальные улучшения. Отзывы пользователей помогают нам проводить итерации и доводить дизайн до совершенства.
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font">6. Имплементация:</span> После утверждения дизайна наша команда разработчиков приступает к его реализации. Мы используем передовые технологии и методы программирования, чтобы создать функциональный и эффективный интерфейс.
+                      </li>
+                    </ul>
+                    <div class="about-services__bottom-text">
+                      <p>
+                        Каждый этап создания UI/UX-дизайна веб-студией Savvy выполняется с большим вниманием к деталям и с учетом потребностей пользователей. Мы стремимся создать интерактивные и привлекательные веб-сайты, которые оставят положительное впечатление у пользователей и помогут вашему бизнесу достичь успеха в онлайн-мире.
+                      </p>
+                    </div>
+                    <div class="about-services__content-box">
+                      <a class="about-services__content-btn btn" href="#">
+                        Заказать
+                      </a>
+                      <button class="about-services__open about-services__open--close" type="button">
+                        <span class="about-services__btn-bg">
+                          <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.12132" y="35.4767" width="50" height="50" rx="3.5" transform="rotate(-45 0.12132 35.4767)" stroke="#14F0FF" stroke-width="3"/>
+                          </svg>                    
+                        </span>
+                        <span class="about-services__btn-arrow">
+                          <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.7998 1.45833C12.7998 0.652908 12.2849 -1.46662e-06 11.6498 -1.46662e-06C11.0147 -1.46662e-06 10.4998 0.652908 10.4998 1.45833L10.4998 33.5417C10.4998 34.3471 11.0147 35 11.6498 35C12.2849 35 12.7998 34.3471 12.7998 33.5417L12.7998 1.45833Z" fill="#01F0FF"/>
+                            <path d="M2.42064 22.4199C1.86685 21.8601 0.969075 21.8601 0.415344 22.4199C-0.138387 22.9799 -0.138387 23.8876 0.415344 24.4475L10.6048 34.7502C11.1586 35.3101 12.0564 35.3102 12.6102 34.7503L12.6184 34.7418L22.7995 24.4475C23.3533 23.8876 23.3533 22.9798 22.7995 22.4199C22.2458 21.8601 21.348 21.8601 20.7943 22.4199L11.6074 31.7088L2.42064 22.4199Z" fill="#01F0FF"/>
+                          </svg>                    
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-services__box">
+                  <button class="about-services__open about-services__open--open" type="button">
+                    <span class="about-services__btn-bg">
+                      <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.12132" y="35.4767" width="50" height="50" rx="3.5" transform="rotate(-45 0.12132 35.4767)" stroke="#14F0FF" stroke-width="3"/>
+                      </svg>                    
+                    </span>
+                    <span class="about-services__btn-arrow">
+                      <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.7998 1.45833C12.7998 0.652908 12.2849 -1.46662e-06 11.6498 -1.46662e-06C11.0147 -1.46662e-06 10.4998 0.652908 10.4998 1.45833L10.4998 33.5417C10.4998 34.3471 11.0147 35 11.6498 35C12.2849 35 12.7998 34.3471 12.7998 33.5417L12.7998 1.45833Z" fill="#01F0FF"/>
+                        <path d="M2.42064 22.4199C1.86685 21.8601 0.969075 21.8601 0.415344 22.4199C-0.138387 22.9799 -0.138387 23.8876 0.415344 24.4475L10.6048 34.7502C11.1586 35.3101 12.0564 35.3102 12.6102 34.7503L12.6184 34.7418L22.7995 24.4475C23.3533 23.8876 23.3533 22.9798 22.7995 22.4199C22.2458 21.8601 21.348 21.8601 20.7943 22.4199L11.6074 31.7088L2.42064 22.4199Z" fill="#01F0FF"/>
+                      </svg>                    
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="about-services__item">
+              <div class="about-services__item-inner">
+                <div class="about-services__top">
+                  <h2 class="about-services__item-title">
+                    ВЕБ-ХОСТИНГ И ПОДДЕРЖКА
+                  </h2>
+                  <span class="about-services__item-price">
+                    8000 РУБЛЕЙ
+                  </span>
+                  <ul class="about-services__icons">
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-1.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Дизайн
+                      </span>
+                    </li>
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-2.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Наполнение
+                      </span>
+                    </li>
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-3.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Вёрстка
+                      </span>
+                    </li>
+                    <li class="about-services__icons-item">
+                      <img class="about-services__icons-img" src="img/icons/about-services-4.svg" alt="">
+                      <span class="about-services__icons-text">
+                        Адаптив
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="about-services__wrapper">
+                  <div class="about-services__content">
+                    <h3 class="about-services__content-title">
+                      Начало разработки сайта
+                    </h3>
+                    <div class="about-services__content-text">
+                      <p>
+                        Для начала работы нам нужна 50% предоплата на расчетный счет, после чего приступаем к составлению детального технического задания. Работаем официально, договор, оригинал счета, акт выполненных работ предоставим.
+                      </p>
+                    </div>
+                    <ul class="about-services__content-items">
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font about-services__content-font--list">1. Веб-хостинг:</span>
+                        <ol class="about-services__item-items">
+                          <li class="about-services__item-item">
+                            Инфраструктура: Мы предоставляем высококачественные серверы и инфраструктуру, чтобы ваш сайт работал надежно и быстро. Мы используем передовые технологии для обеспечения оптимальной производительности и безопасности.
+                          </li>
+                          <li class="about-services__item-item">
+                            Подбор планов: Наши специалисты помогают вам выбрать наиболее подходящий план хостинга в соответствии с потребностями вашего веб-сайта. Мы учитываем ожидаемый трафик, объем данных и спецификации сайта для обеспечения оптимальной производительности.
+                          </li>
+                          <li class="about-services__item-item">
+                            Мониторинг и обновления: Мы следим за работой серверов 24/7 и обновляем программное обеспечение, чтобы предотвратить возможные уязвимости и обеспечить непрерывную работу вашего сайта.
+                          </li>
+                          <li class="about-services__item-item">
+                            Резервное копирование: Мы регулярно создаем резервные копии вашего сайта, чтобы защитить его от потери данных в случае чего-либо непредвиденного.
+                          </li>
+                        </ol>
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font about-services__content-font--list">2. Техническая поддержка:</span>
+                        <ol class="about-services__item-items">
+                          <li class="about-services__item-item">
+                            Консультации и помощь: Наша команда поддержки доступна для консультаций и ответов на ваши вопросы. Мы помогаем разрешать технические вопросы и предоставляем рекомендации по улучшению функциональности вашего сайта.
+                          </li>
+                          <li class="about-services__item-item">
+                            Исправление ошибок: Если возникают проблемы или ошибки на вашем сайте, мы оперативно реагируем и устраняем их, чтобы минимизировать влияние на работу сайта.
+                          </li>
+                          <li class="about-services__item-item">
+                            Обновления и апгрейды: Мы следим за новыми обновлениями и выпусками программного обеспечения, чтобы ваш сайт всегда был актуальным и работал на последних версиях.
+                          </li>
+                          <li class="about-services__item-item">
+                            Управление контентом: По вашему запросу мы можем внести изменения в содержимое вашего сайта, обновить информацию или добавить новые разделы.
+                          </li>
+                        </ol>
+                      </li>
+                      <li class="about-services__content-item">
+                        <span class="about-services__content-font about-services__content-font--list">3. Оптимизация производительности:</span>
+                        <ol class="about-services__item-items">
+                          <li class="about-services__item-item">
+                            Скорость загрузки: Мы уделяем внимание оптимизации производительности вашего сайта, чтобы он загружался быстро и пользователи не испытывали задержек.
+                          </li>
+                          <li class="about-services__item-item">
+                            SEO-оптимизация: Мы следим за соблюдением SEO-стандартов и проводим оптимизацию для улучшения рейтинга вашего сайта в поисковых системах.
+                          </li>
+                        </ol>
+                      </li>
+                    </ul>
+                    <div class="about-services__bottom-text">
+                      <p>
+                        Наша веб-студия, поможет создать функциональный и привлекательный сайт-каталог, который поможет вашему бизнесу расшириться и успешно представить ваш ассортимент в онлайн-мире.
+                      </p>
+                    </div>
+                    <div class="about-services__content-box">
+                      <a class="about-services__content-btn btn" href="#">
+                        Заказать
+                      </a>
+                      <button class="about-services__open about-services__open--close" type="button">
+                        <span class="about-services__btn-bg">
+                          <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.12132" y="35.4767" width="50" height="50" rx="3.5" transform="rotate(-45 0.12132 35.4767)" stroke="#14F0FF" stroke-width="3"/>
+                          </svg>                    
+                        </span>
+                        <span class="about-services__btn-arrow">
+                          <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.7998 1.45833C12.7998 0.652908 12.2849 -1.46662e-06 11.6498 -1.46662e-06C11.0147 -1.46662e-06 10.4998 0.652908 10.4998 1.45833L10.4998 33.5417C10.4998 34.3471 11.0147 35 11.6498 35C12.2849 35 12.7998 34.3471 12.7998 33.5417L12.7998 1.45833Z" fill="#01F0FF"/>
+                            <path d="M2.42064 22.4199C1.86685 21.8601 0.969075 21.8601 0.415344 22.4199C-0.138387 22.9799 -0.138387 23.8876 0.415344 24.4475L10.6048 34.7502C11.1586 35.3101 12.0564 35.3102 12.6102 34.7503L12.6184 34.7418L22.7995 24.4475C23.3533 23.8876 23.3533 22.9798 22.7995 22.4199C22.2458 21.8601 21.348 21.8601 20.7943 22.4199L11.6074 31.7088L2.42064 22.4199Z" fill="#01F0FF"/>
+                          </svg>                    
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-services__box">
+                  <button class="about-services__open about-services__open--open" type="button">
+                    <span class="about-services__btn-bg">
+                      <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.12132" y="35.4767" width="50" height="50" rx="3.5" transform="rotate(-45 0.12132 35.4767)" stroke="#14F0FF" stroke-width="3"/>
+                      </svg>                    
+                    </span>
+                    <span class="about-services__btn-arrow">
+                      <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.7998 1.45833C12.7998 0.652908 12.2849 -1.46662e-06 11.6498 -1.46662e-06C11.0147 -1.46662e-06 10.4998 0.652908 10.4998 1.45833L10.4998 33.5417C10.4998 34.3471 11.0147 35 11.6498 35C12.2849 35 12.7998 34.3471 12.7998 33.5417L12.7998 1.45833Z" fill="#01F0FF"/>
+                        <path d="M2.42064 22.4199C1.86685 21.8601 0.969075 21.8601 0.415344 22.4199C-0.138387 22.9799 -0.138387 23.8876 0.415344 24.4475L10.6048 34.7502C11.1586 35.3101 12.0564 35.3102 12.6102 34.7503L12.6184 34.7418L22.7995 24.4475C23.3533 23.8876 23.3533 22.9798 22.7995 22.4199C22.2458 21.8601 21.348 21.8601 20.7943 22.4199L11.6074 31.7088L2.42064 22.4199Z" fill="#01F0FF"/>
+                      </svg>                    
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="other">
+        <div class="container">
+          <div class="other__top-text">
+            <p>
+              Веб-студия Savvy рада предложить вам не только основные услуги веб-разработки и дизайна, но и ряд дополнительных услуг, которые помогут вам усилить ваше онлайн-присутствие и достичь еще больших успехов. Вот некоторые из наших дополнительных услуг:
+            </p>
+          </div>
+          <ul class="other__items">
+            <li class="other__item">
+              <h3 class="other__item-title">
+                Обучение веб-разработке и программированию
+              </h3>
+              <div class="other__item-text">
+                <p>
+                  В нашей веб-студии мы создали уникальную и эффективную программу обучения веб-разработке и программированию, которая поможет вам освоить все необходимые навыки .
+                </p>
+              </div>
+              <a class="other__item-btn btn" href="#">
+                Узнать больше
+              </a>
+            </li>
+            <li class="other__item">
+              <h3 class="other__item-title">
+                Создание фирменного стиля
+              </h3>
+              <div class="other__item-text">
+                <p>
+                  Фирменный стиль, разработанный веб-студией Savvy, поможет вашему бренду выделиться среди конкурентов и создать прочное впечатление у вашей аудитории. Мы гарантируем высокое качество дизайна и внимательное внедрение каждого элемента фирменного стиля, чтобы ваш бренд стал узнаваемым и успешным на рынке.
+                </p>
+              </div>
+              <a class="other__item-btn btn" href="#">
+                Заказать
+              </a>
+            </li>
+            <li class="other__item">
+              <h3 class="other__item-title">
+                3D печать
+              </h3>
+              <div class="other__item-text">
+                <p>
+                  Наши возможности расширяются и находят новые горизонты, и теперь мы рады представить вам услугу печати 3D объектов в нашей веб-студии! Мы осознаем, что технологии 3D-печати - это будущее, и мы стремимся быть на переднем крае инноваций.
+                </p>
+              </div>
+              <a class="other__item-btn btn" href="#">
+                Заказать
+              </a>
+            </li>
+            <li class="other__item">
+              <h3 class="other__item-title">
+                Копирайтинг
+              </h3>
+              <div class="other__item-text">
+                <p>
+                  Наша веб-студия осуществляет услугу копирайтинга , чтобы предоставить вам тексты, которые будут продвигать ваш бренд и привлекать новых клиентов.Наша команда готова превратить ваши идеи в эффективные и убедительные тексты, которые оставят яркое впечатление у вашей аудитории.
+                </p>
+              </div>
+              <a class="other__item-btn btn" href="#">
+                Заказать
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="bottom-form">
+        <div class="container">
+          <div class="bottom-form__inner">
+            <div class="bottom-form__left">
+              <h2 class="bottom-form__title title-two">
+                ДАВАЙТЕ СДЕЛАЕМ ЭТО ВМЕСТЕ!
+              </h2>
+              <form class="form">
+                <label class="form__label form__label--first">
+                  <input class="form__input" type="text" placeholder="Имя">
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="tel" placeholder="Номер телефона">
+                </label>
+                <div class="form__box">
+                  <button class="form__btn btn btn-anim-color" type="submit">
+                    Отправить
+                  </button>
+                  <span class="form__text">
+                    Мы свяжемся с Вами в ближайшее время
+                  </span>
+                </div>
+              </form>
             </div>
-         </section>
+            <div class="bottom-form__right" data-scroll data-scroll-speed="1">
+              <img class="bottom-form__img" src="img/bottom-form.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="arrow-up">
+        <div class="container">
+          <a class="arrow-up__content">
+            <span class="arrow-up__circle">
+              <svg width="92" height="90" viewBox="0 0 92 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M31.6635 87.2218C8.83043 79.181 -3.18799 54.2303 4.81931 31.4923C12.8265 8.75457 37.8272 -3.15984 60.6602 4.88094C83.4931 12.9216 95.5116 37.8726 87.5044 60.6104C82.9498 73.5438 72.8973 82.975 60.8729 87.2245" stroke="white" stroke-width="4" stroke-linecap="round"/>
+              </svg>                           
+            </span>
+            <span class="arrow-up__arrow">
+              <svg width="41" height="67" viewBox="0 0 41 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.5 64.2485C18.5 65.7673 19.3955 66.9985 20.5 66.9985C21.6045 66.9985 22.5 65.7673 22.5 64.2485L22.5 3.74855C22.5 2.22979 21.6045 0.998535 20.5 0.998535C19.3955 0.998535 18.5 2.22978 18.5 3.74855L18.5 64.2485Z" fill="white"/>
+                <path d="M36.3292 22.7263C37.2834 23.6804 38.8303 23.6804 39.7844 22.7263C40.7385 21.7721 40.7385 20.2252 39.7844 19.2711L22.2276 1.71434C21.2733 0.760137 19.7264 0.759957 18.7722 1.71416L18.7581 1.72859L1.21558 19.2711C0.261471 20.2253 0.261471 21.7722 1.21558 22.7263C2.1697 23.6804 3.71664 23.6804 4.67075 22.7263L20.5 6.89709L36.3292 22.7263Z" fill="white"/>
+              </svg>              
+            </span>
+          </a>
+        </div>
+      </div>
+
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a class="footer__box" href="#">
+            <img class="footer__img" src="img/icons/logo-two.svg" alt="">
+          </a>
+          <nav class="menu menu--footer">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  О нас
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Креативные решения
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Наши проекты
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Обратная связь
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="study.html">
+                  Обучение программированию
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Отзывы студентов об обучении
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__num-box">
+            <a class="footer__phone anim-line" href="tel:+79785000623">
+              +7 978 500 06 23
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  
+  <script src="js/main.min.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
+
 </html>

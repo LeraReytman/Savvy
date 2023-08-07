@@ -1,68 +1,70 @@
 $(function(){
 
-  window.onload = (event) => {
+  let swiperThree = new Swiper(".swiper-three", {
 
-    let swiperThree = new Swiper(".swiper-three", {
+    slidesPerView: 1,
 
-      slidesPerView: 1,
+    spaceBetween: 12,
 
-      spaceBetween: 12,
+    loop: true,
+  
+    speed: 1000,
 
-      loop: true,
-    
-      speed: 1000,
+    navigation: {
 
-      navigation: {
+      nextEl: '.reviews__arrow--prev',
 
-        nextEl: '.reviews__arrow--prev',
+      prevEl: '.reviews__arrow--next',
 
-        prevEl: '.reviews__arrow--next',
+    },
+
+    breakpoints: {
+
+      991: {
+  
+        slidesPerView: 2,
+        
+        spaceBetween: 36,
 
       },
 
-      breakpoints: {
+      1300: {
   
-        991: {
-    
-          slidesPerView: 2,
-          
-          spaceBetween: 36,
+        slidesPerView: 3,
+        
+        spaceBetween: 52,
 
-        },
+      },
+  
+    }
+  
+  });
 
-        1300: {
-    
-          slidesPerView: 3,
-          
-          spaceBetween: 52,
+  let swiperTwo = new Swiper(".swiper-two", {
+  
+    direction: 'vertical',
 
-        },
-    
-      }
-    
-    });
+    slidesPerView: 1,
 
-    let swiperTwo = new Swiper(".swiper-two", {
-    
-      direction: 'vertical',
+    loop: true,
+  
+    speed: 1000,
 
-      slidesPerView: 1,
+    allowTouchMove: false,
 
-      loop: true,
-    
-      speed: 1000,
+    allowMouseEvents: false,
+  
+    autoplay: {
+  
+      delay: 2000,
+  
+    }, 
+  
+  });
 
-      allowTouchMove: false,
+  
 
-      allowMouseEvents: false,
-    
-      autoplay: {
-    
-        delay: 2000,
-    
-      }, 
-    
-    });
+  window.onload = (event) => {
 
     const scroll = new LocomotiveScroll({
 
@@ -72,6 +74,100 @@ $(function(){
     });
 
     const target = document.querySelector('#top-scroll');
+
+    if ($('.more-wrapper').length) {
+
+      new ResizeObserver(() => 
+
+        scroll.update()).observe(document.querySelector("[data-scroll-container]")
+
+      )
+
+    }
+
+    const elems = document.querySelectorAll(".about-services__items .about-services__item");
+
+    Array.prototype.forEach.call(elems, function(e, i) {
+
+        e.style.zIndex = elems.length - i;
+
+    });
+
+    const mousHeight = $(this).find('.about-services__item-inner').outerHeight()
+
+    $('.about-services__item:first-child').css('height', mousHeight);
+
+    let flag = false
+
+    $('.about-services__item').on('mousemove', function() {
+
+      const mousHeight = $(this).find('.about-services__item-inner').outerHeight()
+
+      $('.about-services__item').removeClass('about-services__item--active')
+      $(this).addClass('about-services__item--active')
+
+      $('.about-services__item:first-child').css('height', '200');
+      $('.about-services__item:not(:first-child)').css('height', '300');
+
+      $(this).css('height', mousHeight);
+
+      if (flag == false) {
+
+        new ResizeObserver(() => 
+
+          scroll.update()).observe(document.querySelector("[data-scroll-container]")
+
+        )
+
+        flag = true
+
+      }
+
+    });
+
+    $('.about-services__item').on('mouseleave', function() {
+
+      setTimeout(() => {
+
+        if ($(this).hasClass('about-services__item--active')) {
+
+          const mousHeight = $(this).find('.about-services__item-inner').outerHeight()
+
+          $(this).css('height', mousHeight);
+
+        }
+
+      }, 600)
+
+    });
+
+    $('.about-services__open').on('click', function() {
+
+      const height = $(this).closest('.about-services__item').find('.about-services__content').height();
+
+      $(this).closest('.about-services__item').find('.about-services__wrapper').css('height', height);
+      $(this).closest('.about-services__item').find('.about-services__box').addClass('about-services__box--open')
+        
+      new ResizeObserver(() => 
+
+        scroll.update()).observe(document.querySelector("[data-scroll-container]")
+
+      )
+
+    });
+
+    $('.about-services__open--close').on('click', function() {
+
+      $(this).closest('.about-services__item').find('.about-services__wrapper').css('height', '0');
+      $(this).closest('.about-services__item').find('.about-services__box').removeClass('about-services__box--open')
+
+      new ResizeObserver(() => 
+      
+        scroll.update()).observe(document.querySelector("[data-scroll-container]")
+
+      )
+
+    });
 
     $('.arrow-up').on('click', function() {
 
