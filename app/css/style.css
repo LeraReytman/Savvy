@@ -5241,6 +5241,7 @@ button {
 
 .other__item:first-child .other__item-text {
   max-width: 316px;
+  margin-bottom: 56px;
 }
 
 .other__item:first-child::before {
