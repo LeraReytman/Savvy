@@ -93,53 +93,61 @@ $(function(){
 
     });
 
-    const mousHeight = $(this).find('.about-services__item-inner').outerHeight()
-
-    $('.about-services__item:first-child').css('height', mousHeight);
-
-    let flag = false
-
-    $('.about-services__item').on('mousemove', function() {
+    if (window.innerWidth > 991) {
 
       const mousHeight = $(this).find('.about-services__item-inner').outerHeight()
 
-      $('.about-services__item').removeClass('about-services__item--active')
-      $(this).addClass('about-services__item--active')
+      $('.about-services__item:first-child').css('height', mousHeight);
 
-      $('.about-services__item:first-child').css('height', '200');
-      $('.about-services__item:not(:first-child)').css('height', '300');
+    }
 
-      $(this).css('height', mousHeight);
+    let flag = false
 
-      if (flag == false) {
+    if (window.innerWidth > 991) {
 
-        new ResizeObserver(() => 
+      $('.about-services__item').on('mousemove', function() {
 
-          scroll.update()).observe(document.querySelector("[data-scroll-container]")
+        const mousHeight = $(this).find('.about-services__item-inner').outerHeight()
 
-        )
+        $('.about-services__item').removeClass('about-services__item--active')
+        $(this).addClass('about-services__item--active')
 
-        flag = true
+        $('.about-services__item:first-child').css('height', '200');
+        $('.about-services__item:not(:first-child)').css('height', '300');
 
-      }
+        $(this).css('height', mousHeight);
 
-    });
+        if (flag == false) {
 
-    $('.about-services__item').on('mouseleave', function() {
+          new ResizeObserver(() => 
 
-      setTimeout(() => {
+            scroll.update()).observe(document.querySelector("[data-scroll-container]")
 
-        if ($(this).hasClass('about-services__item--active')) {
+          )
 
-          const mousHeight = $(this).find('.about-services__item-inner').outerHeight()
-
-          $(this).css('height', mousHeight);
+          flag = true
 
         }
 
-      }, 600)
+      });
 
-    });
+      $('.about-services__item').on('mouseleave', function() {
+
+        setTimeout(() => {
+
+          if ($(this).hasClass('about-services__item--active')) {
+
+            const mousHeight = $(this).find('.about-services__item-inner').outerHeight()
+
+            $(this).css('height', mousHeight);
+
+          }
+
+        }, 600)
+
+      });
+
+    }
 
     $('.about-services__open').on('click', function() {
 
