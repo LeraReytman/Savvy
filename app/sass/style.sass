@@ -1458,11 +1458,15 @@
   &__price
     display: block
     font-size: 24px
+    min-height: 48px
     margin-bottom: 64px
 
     @include _1200
       font-size: 20px
       margin-bottom: 32px
+
+    @include _991
+      min-height: 100%
 
     @include _767
       font-size: 18px
