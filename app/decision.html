@@ -58,7 +58,7 @@
     <header class="header">
       <div class="container">
         <div class="header__inner">
-          <a class="logo" href="index.html">
+          <a class="logo" href="./">
             <img class="logo__img" src="img/icons/logo.svg" alt="">
           </a>
           <nav class="menu menu--header">
@@ -231,10 +231,10 @@
                         <img class="services__img" src="img/services-3.svg" alt="">
                       </div>
                       <h3 class="services__item-title">
-                        Разработка интернет-магазинов
+                        Копирайтинг
                       </h3>
                       <span class="services__price">
-                        От 25000 рублей
+                        По договоренности
                       </span>
                       <a class="services__btn" href="#">
                         Узнать детали
@@ -249,10 +249,10 @@
                         <img class="services__img" src="img/services-4.svg" alt="">
                       </div>
                       <h3 class="services__item-title">
-                        Разработка мобильных приложений
+                        3D печать
                       </h3>
                       <span class="services__price">
-                        От 10 000 рублей
+                        В зависимости от модели
                       </span>
                       <a class="services__btn" href="#">
                         Узнать детали
@@ -295,7 +295,6 @@
                         <img class="services__img" src="img/services-7.svg" alt="">
                       </div>
                       <h3 class="services__item-title">
-                        Разработка мобильных приложений
                         UI/UX-дизайн
                         Веб-хостинг и поддержка
                       </h3>
@@ -380,20 +379,25 @@
               <h2 class="bottom-form__title title-two">
                 ДАВАЙТЕ СДЕЛАЕМ ЭТО ВМЕСТЕ!
               </h2>
-              <form class="form">
-                <label class="form__label form__label--first">
-                  <input class="form__input" type="text" placeholder="Имя">
-                </label>
-                <label class="form__label">
-                  <input class="form__input" type="tel" placeholder="Номер телефона">
-                </label>
-                <div class="form__box">
-                  <button class="form__btn btn btn-anim-color" type="submit">
-                    Отправить
-                  </button>
-                  <span class="form__text">
-                    Мы свяжемся с Вами в ближайшее время
-                  </span>
+              <form class="form" id="form">
+                <span class="form__ok">
+                  Заявка отправлена!
+                </span>
+                <div class="form__label-box">
+                  <label class="form__label form__label--first">
+                    <input class="form__input form__input--text" name="text" id="text" type="text" placeholder="Имя">
+                  </label>
+                  <label class="form__label">
+                    <input class="form__input form__input--phone" name="phone" id="phone" type="tel" placeholder="Номер телефона">
+                  </label>
+                  <div class="form__box">
+                    <button class="form__btn btn btn-anim-color" type="submit">
+                      Отправить
+                    </button>
+                    <span class="form__text">
+                      Мы свяжемся с Вами в ближайшее время
+                    </span>
+                  </div>
                 </div>
               </form>
             </div>
@@ -427,7 +431,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
-          <a class="footer__box" href="#">
+          <a class="footer__box" href="./">
             <img class="footer__img" src="img/icons/logo-two.svg" alt="">
           </a>
           <nav class="menu menu--footer">

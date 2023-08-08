@@ -1,5 +1,103 @@
 $(function(){
 
+  if ($('.decision-wrapper').length || $('.study-wrapper').length || $('.more-wrapper').length) {
+
+    function validatePhoneNumber(input_str) {
+  
+      var re = /^((8|\+)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+  
+      return re.test(input_str);
+  
+    }
+  
+    $('input').on('focusout', function(e){
+  
+      let inputName = $(this).attr('name');
+      let inputThis = e.target.value
+
+      if (inputThis.length < 1 && inputName === 'text') {
+  
+        $(this).closest('.form__input').addClass('form__input--error');
+  
+      } else if (!validatePhoneNumber(inputThis) && inputName === 'phone') {
+  
+        $(this).closest('.form__input').addClass('form__input--error');
+  
+      } else {
+  
+        $(this).closest('.form__input').removeClass('form__input--error');
+  
+      }
+  
+    });
+  
+    $('.form').submit(function (e) { 
+  
+      e.preventDefault(); 
+  
+      let formInputText = $(this).find('.form__input--text').attr('id');
+      let formInputPhone = $(this).find('.form__input--phone').attr('id');
+  
+      let text = document.getElementById(formInputText).value;
+      let phone = document.getElementById(formInputPhone).value;
+  
+      let formTest = $(this).attr('id');
+      let formId = document.getElementById(formTest);
+      let formData = new FormData(formId);
+  
+      let error = 0
+
+      if (text.length < 1) {
+  
+        $(this).find('.form__input--text').addClass('form__input--error');
+        error++;
+  
+      }
+  
+      if (!validatePhoneNumber(phone)) {
+  
+        $(this).find('.form__input--phone').addClass('form__input--error');
+        error++;
+  
+      } 
+  
+      async function formSend(e) { 
+  
+        let response = await fetch('send.php', {
+  
+          method: 'POST',
+          body: formData
+  
+  
+        });
+  
+        if (response.ok) {
+  
+          let result = await response.json();
+          formId.reset();
+          $('.form__label-box').addClass('form__label-box--hidden')
+          $('.form__ok').addClass('form__ok--visible')
+  
+        } else {
+  
+          alert('Ошибка');
+  
+        }
+  
+      }
+  
+      if (error === 0) {
+  
+        formSend();
+  
+      }
+  
+      return false;
+  
+    });
+
+  }
+
   let swiperThree = new Swiper(".swiper-three", {
 
     slidesPerView: 1,

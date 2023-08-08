@@ -30,6 +30,7 @@
     "wow.js": "^1.2.2"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "locomotive-scroll": "^4.1.4",
     "swiper": "^8.4.7"
   }
